@@ -1,0 +1,153 @@
+{
+  "nav": {
+    "home": "Faqja Kryesore",
+    "services": "Shërbimet",
+    "caseStudies": "Rastet e Studimit",
+    "insights": "Blog",
+    "about": "Rreth Nesh",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "headline": "Automatizimi i Biznesit dhe Teknologjia e Operacioneve Financiare",
+    "subheadline": "Digitalizoni proceset e biznesit tuaj, rritni efikasitetin dhe përshpejtoni rritjen. Çoni biznesin tuaj në nivelin tjetër me zgjidhje moderne të automatizimit dhe teknologjinë e operacioneve financiare.",
+    "ctaPrimary": "Filloni Tani",
+    "ctaSecondary": "Më Shumë Informacion"
+  },
+  "services": {
+    "title": "Shërbimet Tona",
+    "subtitle": "Zgjidhje gjithëpërfshirëse që optimizojnë proceset e biznesit tuaj",
+    "automation": {
+      "title": "Automatizimi i Proceseve të Biznesit",
+      "description": "Automatizoni detyrat e përsëritura dhe lejoni ekipin tuaj të përqendrohet në punë më strategjike."
+    },
+    "reporting": {
+      "title": "Raportimi dhe Dashboard-et",
+      "description": "Merrni vendime të informuara me të dhëna në kohë reale. Dashboard-e të personalizueshme dhe raporte të detajuara."
+    },
+    "integrations": {
+      "title": "Integrimet e Sistemeve",
+      "description": "Lidhni sistemet tuaja ekzistuese dhe optimizoni rrjedhën e të dhënave."
+    },
+    "bots": {
+      "title": "Chatbot-et dhe Bot-et",
+      "description": "Chatbot-e inteligjentë që mbështesin shërbimin ndaj klientit 24/7 dhe bot-e që automatizojnë proceset e biznesit."
+    },
+    "workflows": {
+      "title": "Menaxhimi i Rrjedhës së Punës",
+      "description": "Vizualizoni, optimizoni dhe menaxhoni proceset tuaja komplekse të biznesit."
+    },
+    "consulting": {
+      "title": "Këshillimi Teknologjik",
+      "description": "Udhëzim ekspert dhe këshillim strategjik në udhëtimin tuaj të transformimit dixhital."
+    }
+  },
+  "howWeWork": {
+    "title": "Si Punojmë",
+    "subtitle": "E sjellim projektin tuaj në jetë me një proces 4-hapësh",
+    "discovery": {
+      "title": "Zbulimi",
+      "description": "Analizojmë nevojat tuaja dhe dizajnojmë zgjidhjen më të mirë."
+    },
+    "build": {
+      "title": "Ndërtimi",
+      "description": "Zhvillojmë zgjidhjet tuaja të personalizuara me teknologji moderne."
+    },
+    "deploy": {
+      "title": "Vendosja",
+      "description": "Lansojmë zgjidhjet tuaja në mënyrë të sigurt."
+    },
+    "support": {
+      "title": "Mbështetja",
+      "description": "Jemi këtu me mbështetje të vazhdueshme dhe përmirësime."
+    }
+  },
+  "whyAlbania": {
+    "title": "Pse Shqipëria?",
+    "subtitle": "Ne jemi këtu për të transformuar ekosistemin dixhital të Shqipërisë",
+    "why": {
+      "title": "Pse Shqipëria?",
+      "stat1": "95%",
+      "stat1Label": "Shërbime Publike Dixhitale",
+      "stat1Desc": "Qeveria ka ndërtuar infrastrukturë të fuqishme dixhitale, por SME-të nuk e përdorin efektivisht. Ne e bëjmë këtë gap në mundësi.",
+      "stat2": "93%",
+      "stat2Label": "Banka me Departamente Dijitale",
+      "stat2Desc": "Bankat kanë departamente transformimi dixhital, por ende ka nevojë për zgjidhje automatizimi për proceset e tyre.",
+      "stat3": "Stratejik",
+      "stat3Label": "Pozicion Gjeografik",
+      "stat3Desc": "Porta e hyrjes në Evropë, me popullsi të re dhe dinamike që është gati për inovacion teknologjik."
+    },
+    "innovation": {
+      "title": "Mundësitë e Inovacionit",
+      "desc": "Shqipëria ofron fusha të shumta për inovacion dhe rritje teknologjike:",
+      "point1": "Fintech Sandbox - Banka e Shqipërisë ka krijuar një regulatory sandbox për inovacione fintech",
+      "point2": "Nevoja për Automatizim - SME-të punojnë me procese manuale; automatizimi mund të rrisë produktivitetin me 40-60%",
+      "point3": "E-Tregtia Dixhitale - Platformat e-tregtie po rriten, por integrimet dhe automatizimi mungojnë",
+      "point4": "Hendeku i Aftësive - Ka nevojë për edukim dhe konsultim për teknologji moderne"
+    },
+    "value": {
+      "title": "Vlera që Shtojmë",
+      "desc": "Ne kontribuojmë në ekosistemin teknologjik të Shqipërisë në mënyra të shumta:",
+      "point1": "Krijimi i Punësimit - Trajnojmë forcë pune të kualifikuar në sektorin e teknologjisë",
+      "point2": "Transferimi i Know-How - Sjellim eksperiencë ndërkombëtare në ekosistemin lokal",
+      "point3": "Rritja Ekonomike - Transformimi dixhital mund të rrisë performancën e SME-ve me 30-50%",
+      "point4": "Avantazh Konkurrues - Me automatizim, bizneset shqiptare mund të konkurrojnë në nivel rajonal"
+    },
+    "results": {
+      "title": "Rezultatet Reale",
+      "desc": "Zgjidhjet tona kanë ndikuar pozitivisht në bizneset shqiptare:",
+      "example1": "Një kompani e-tregtie reduktoi kohën e përpunimit të porosive nga 8 orë në 2 orë",
+      "example2": "Një kompani financiare reduktoi kohën e raportimit me 70%",
+      "example3": "Një kompani prodhimi arriti 95% saktësi në menaxhimin e inventarit",
+      "example4": "Sektori i shërbimeve përmirësoi kohën e përgjigjes së klientit me 80%"
+    }
+  },
+  "testimonials": {
+    "title": "Çfarë Thonë Klientët Tanë",
+    "subtitle": "Përvojat nga partnerët tanë të biznesit"
+  },
+  "faq": {
+    "title": "Pyetjet e Bëra Shpesh",
+    "q1": "Me cilat industri punoni?",
+    "a1": "Ofrojmë zgjidhje për tregtinë elektronike, pakicën, sektorin e shërbimeve dhe më shumë.",
+    "q2": "Sa kohë zgjat një projekt?",
+    "a2": "Ndryshon sipas shtrirjes së projektit, zakonisht përfundon brenda 2-8 javëve.",
+    "q3": "A mund të integrohet me sistemet tona ekzistuese?",
+    "a3": "Po, mund të integrohemi me sistemet tuaja ekzistuese.",
+    "q4": "A ofroni shërbime mbështetjeje?",
+    "a4": "Po, ofrojmë mbështetje dhe shërbime mirëmbajtjeje të vazhdueshme pas përfundimit të projektit.",
+    "q5": "Si është çmimi?",
+    "a5": "Ofrojmë çmimim të personalizuar bazuar në projekt. Na kontaktoni për detaje.",
+    "q6": "Ku ofroni shërbime?",
+    "a6": "Bazuar në Shqipëri, shërbejmë klientë globalë."
+  },
+  "contact": {
+    "title": "Na Kontaktoni",
+    "subtitle": "Na kontaktoni për projektet tuaja",
+    "name": "Emri i Plotë",
+    "email": "Email",
+    "message": "Mesazhi",
+    "submit": "Dërgo",
+    "sending": "Duke dërguar...",
+    "success": "Mesazhi juaj u dërgua me sukses!",
+    "error": "Ndodhi një gabim. Ju lutemi provoni përsëri."
+  },
+  "footer": {
+    "company": "DAAT",
+    "description": "Automatizimi i Biznesit dhe Teknologjia e Operacioneve Financiare",
+    "links": {
+      "services": "Shërbimet",
+      "caseStudies": "Rastet e Studimit",
+      "insights": "Blog",
+      "about": "Rreth Nesh",
+      "contact": "Kontakt"
+    },
+    "legal": {
+      "privacy": "Politika e Privatësisë",
+      "terms": "Kushtet e Shërbimit",
+      "cookies": "Politika e Cookies",
+      "gdpr": "Përputhshmëria GDPR"
+    },
+    "rights": "Të gjitha të drejtat e rezervuara.",
+    "compliance": "Në përputhje me ligjet shqiptare (Ligji Nr. 9887) dhe GDPR."
+  }
+}

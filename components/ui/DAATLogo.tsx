@@ -28,7 +28,7 @@ export function DAATLogo({
           sizeClasses[size]
         )}
         style={{
-          imageRendering: "high-quality",
+          imageRendering: "auto",
         }}
       />
     </div>

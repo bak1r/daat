@@ -1,6 +1,6 @@
 import { ContactForm } from "@/components/forms/ContactForm"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { type Locale } from "@/lib/i18n"
+import { type Locale, getTranslations } from "@/lib/i18n"
 import type { Metadata } from "next"
 
 export async function generateMetadata({

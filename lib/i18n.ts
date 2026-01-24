@@ -14,7 +14,17 @@ const translations = {
 }
 
 export function getTranslations(locale: Locale = defaultLocale) {
-  return translations[locale]
+  // Ensure locale is valid, fallback to defaultLocale if not
+  const validLocale = locales.includes(locale) ? locale : defaultLocale
+  const translation = translations[validLocale]
+  
+  // Safety check: if translation is undefined, return default locale translation
+  if (!translation) {
+    console.error(`Translation not found for locale: ${validLocale}, falling back to ${defaultLocale}`)
+    return translations[defaultLocale] || translations.en || translations.tr
+  }
+  
+  return translation
 }
 
 export function getNestedTranslation(

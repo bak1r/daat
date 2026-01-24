@@ -8,7 +8,7 @@ import { Testimonials } from "@/components/sections/Testimonials"
 import { FAQ } from "@/components/sections/FAQ"
 import { FAQSchema } from "@/components/sections/FAQSchema"
 import { FinalCTA } from "@/components/sections/FinalCTA"
-import { type Locale } from "@/lib/i18n"
+import { type Locale, defaultLocale, locales } from "@/lib/i18n"
 import type { Metadata } from "next"
 
 export async function generateMetadata({
@@ -46,18 +46,21 @@ export async function generateMetadata({
 }
 
 export default function HomePage({ params }: { params: { locale: Locale } }) {
+  // Ensure locale is valid, fallback to defaultLocale if not
+  const locale: Locale = locales.includes(params.locale) ? params.locale : defaultLocale
+  
   return (
     <>
-      <FAQSchema locale={params.locale} />
-      <Hero locale={params.locale} />
-      <WhyAlbania locale={params.locale} />
-      <LogoStrip locale={params.locale} />
-      <ServicesGrid locale={params.locale} />
-      <HowWeWork locale={params.locale} />
-      <CaseStudyHighlights locale={params.locale} />
-      <Testimonials locale={params.locale} />
-      <FAQ locale={params.locale} />
-      <FinalCTA locale={params.locale} />
+      <FAQSchema locale={locale} />
+      <Hero locale={locale} />
+      <WhyAlbania locale={locale} />
+      <LogoStrip locale={locale} />
+      <ServicesGrid locale={locale} />
+      <HowWeWork locale={locale} />
+      <CaseStudyHighlights locale={locale} />
+      <Testimonials locale={locale} />
+      <FAQ locale={locale} />
+      <FinalCTA locale={locale} />
     </>
   )
 }

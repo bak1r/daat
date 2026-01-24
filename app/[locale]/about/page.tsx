@@ -39,6 +39,7 @@ const team = [
   },
 ]
 
+// NOT: Generic/sahte müşteri listesi - Gerçek müşterileriniz olduğunda izinle değiştirin
 const clients = [
   "TechFlux Solutions - Stockholm, Sweden",
   "Nordik Data Systems - Oslo, Norway",

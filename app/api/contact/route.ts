@@ -16,6 +16,9 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: true }, { status: 200 })
     }
 
+    // Şimdilik sadece log'a yazıyor
+    // İleride email gönderme eklenebilir (Resend, SendGrid, vb.)
+
     console.log("Contact form submission:", {
       name,
       email,

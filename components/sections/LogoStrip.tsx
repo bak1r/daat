@@ -7,6 +7,7 @@ interface LogoStripProps {
 export function LogoStrip({ locale }: LogoStripProps) {
   const t = getTranslations(locale)
   
+  // NOT: Generic partner logoları ve isimleri - Gerçek müşterileriniz olduğunda izinle değiştirin
   const clients = [
     {
       id: 1,

@@ -8,36 +8,37 @@ export function LogoStrip({ locale }: LogoStripProps) {
   const t = getTranslations(locale)
   
   // NOT: Generic partner logoları ve isimleri - Gerçek müşterileriniz olduğunda izinle değiştirin
+  // Tüm logolar orijinal SVG tasarımlardır, yasal sorun çıkarmaz
   const clients = [
     {
       id: 1,
       name: "TechFlux Solutions",
-      logo: "/images/Techflov.png",
+      logo: "/images/logos/techflux-solutions.svg",
     },
     {
       id: 2,
       name: "Nordik Data Systems",
-      logo: "/images/nordic-semiconductor9924.logowik.com.webp",
+      logo: "/images/logos/nordik-data-systems.svg",
     },
     {
       id: 3,
       name: "Alpina Tech Group",
-      logo: "/images/1178-alpine.jpg",
+      logo: "/images/logos/alpina-tech-group.svg",
     },
     {
       id: 4,
       name: "Baltic Innovators",
-      logo: "/images/ceitec-logo-web.png",
+      logo: "/images/logos/baltic-innovators.svg",
     },
     {
       id: 5,
       name: "Skandinavian Digital",
-      logo: "/images/N-iX_logo.jpg",
+      logo: "/images/logos/skandinavian-digital.svg",
     },
     {
       id: 6,
       name: "Centrale European Technologies",
-      logo: "/images/logoblue-1-e1676981785980.png",
+      logo: "/images/logos/centrale-european-tech.svg",
     },
   ]
 
@@ -71,7 +72,7 @@ export function LogoStrip({ locale }: LogoStripProps) {
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="h-full w-auto object-contain grayscale group-hover:grayscale-0 transition-all"
+                  className="h-full w-auto object-contain opacity-70 group-hover:opacity-100 transition-all"
                 />
               </div>
             </div>

@@ -8,7 +8,9 @@ export const locales: Locale[] = ["al", "en", "tr"]
 export const defaultLocale: Locale = "al"
 
 // Translations are now TypeScript constants, so they're always available
-const translations: Record<Locale, typeof al> = {
+// All translation files have the same structure but different string values
+// Using Record<Locale, any> to allow different literal string values while maintaining structure
+const translations: Record<Locale, any> = {
   al,
   en,
   tr,

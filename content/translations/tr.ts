@@ -190,14 +190,6 @@ export default {
       description: "Bizimle iletişime geçin"
     }
   },
-  services: {
-    title: "Hizmetlerimiz",
-    subtitle: "İş süreçlerinizi optimize eden kapsamlı çözümler",
-    metadata: {
-      title: "Hizmetler - DAAT",
-      description: "İş süreçlerinizi optimize eden kapsamlı çözümler"
-    },
-    automation: {
   footer: {
     company: "DAAT",
     description: "İş Otomasyonu ve Finans Operasyonları Teknolojisi",

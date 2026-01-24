@@ -190,14 +190,6 @@ export default {
       description: "Get in touch with us"
     }
   },
-  services: {
-    title: "Our Services",
-    subtitle: "Comprehensive solutions that optimize your business processes",
-    metadata: {
-      title: "Services - DAAT",
-      description: "Comprehensive solutions that optimize your business processes"
-    },
-    automation: {
   footer: {
     company: "DAAT",
     description: "Business Automation & Finance Ops Tech",

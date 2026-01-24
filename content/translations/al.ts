@@ -190,38 +190,6 @@ export default {
       description: "Na kontaktoni për projektet tuaja"
     }
   },
-  services: {
-    title: "Shërbimet Tona",
-    subtitle: "Zgjidhje gjithëpërfshirëse që optimizojnë proceset e biznesit tuaj",
-    metadata: {
-      title: "Shërbimet - DAAT",
-      description: "Zgjidhje gjithëpërfshirëse që optimizojnë proceset e biznesit tuaj"
-    },
-    automation: {
-      title: "Automatizimi i Proceseve të Biznesit",
-      description: "Automatizoni detyrat e përsëritura dhe lejoni ekipin tuaj të përqendrohet në punë më strategjike."
-    },
-    reporting: {
-      title: "Raportimi dhe Dashboard-et",
-      description: "Merrni vendime të informuara me të dhëna në kohë reale. Dashboard-e të personalizueshme dhe raporte të detajuara."
-    },
-    integrations: {
-      title: "Integrimet e Sistemeve",
-      description: "Lidhni sistemet tuaja ekzistuese dhe optimizoni rrjedhën e të dhënave."
-    },
-    bots: {
-      title: "Zhvillimi i Bot-eve Python",
-      description: "Me ekipin tonë ekspert që specializohet në të gjitha llojet e zhvillimit të bot-eve Python, ne krijojmë bot-e Telegram, Discord, WhatsApp, zgjidhje web scraping, integrimet API dhe bot-e automatizimi të personalizuara. Ne ofrojmë zgjidhje profesionale duke përdorur teknologji moderne Python dhe praktika më të mira."
-    },
-    workflows: {
-      title: "Menaxhimi i Rrjedhës së Punës",
-      description: "Vizualizoni, optimizoni dhe menaxhoni proceset tuaja komplekse të biznesit."
-    },
-    consulting: {
-      title: "Këshillimi Teknologjik",
-      description: "Udhëzim ekspert dhe këshillim strategjik në udhëtimin tuaj të transformimit dixhital."
-    }
-  },
   footer: {
     company: "DAAT",
     description: "Automatizimi i Biznesit dhe Teknologjia e Operacioneve Financiare",

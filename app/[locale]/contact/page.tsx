@@ -8,18 +8,15 @@ export async function generateMetadata({
 }: {
   params: { locale: Locale }
 }): Promise<Metadata> {
-  const isTR = params.locale === "tr"
+  const t = getTranslations(params.locale)
   return {
-    title: isTR ? "İletişim - DAAT" : "Contact - DAAT",
-    description: isTR
-      ? "Bizimle iletişime geçin"
-      : "Get in touch with us",
+    title: t.contact.metadata.title,
+    description: t.contact.metadata.description,
   }
 }
 
 export default function ContactPage({ params }: { params: { locale: Locale } }) {
-  const isTR = params.locale === "tr"
-  const t = require("@/content/translations/" + params.locale + ".json")
+  const t = getTranslations(params.locale)
 
   return (
     <div className="pt-20 pb-16 min-h-screen">

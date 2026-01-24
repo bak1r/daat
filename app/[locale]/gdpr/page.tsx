@@ -7,13 +7,14 @@ export async function generateMetadata({
   params: { locale: Locale }
 }): Promise<Metadata> {
   const t = getTranslations(params.locale)
+  const content = {
+    tr: { description: "GDPR uyumluluğu ve veri koruma bilgileri" },
+    en: { description: "GDPR compliance and data protection information" },
+    al: { description: "Përputhshmëria GDPR dhe informacioni i mbrojtjes së të dhënave" },
+  }
   return {
     title: `${t.footer.legal.gdpr} - DAAT`,
-    description: params.locale === "tr"
-      ? "GDPR uyumluluğu ve veri koruma bilgileri"
-      : params.locale === "al"
-      ? "Përputhshmëria GDPR dhe informacioni i mbrojtjes së të dhënave"
-      : "GDPR compliance and data protection information",
+    description: content[params.locale].description,
   }
 }
 

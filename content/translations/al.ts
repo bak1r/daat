@@ -13,9 +13,27 @@ export default {
     ctaPrimary: "Filloni Tani",
     ctaSecondary: "Më Shumë Informacion"
   },
+  caseStudies: {
+    metadata: {
+      title: "Rastet e Studimit - DAAT",
+      description: "Historitë tona të suksesit dhe projektet e klientëve"
+    }
+  },
+  insights: {
+    metadata: {
+      title: "Blog - DAAT",
+      description: "Artikuj blogu për automatizimin e biznesit, operacionet financiare dhe transformimin dixhital"
+    },
+    subtitle: "Artikuj blogu për automatizimin e biznesit, operacionet financiare dhe transformimin dixhital",
+    readMore: "Lexo Më Shumë"
+  },
   services: {
     title: "Shërbimet Tona",
     subtitle: "Zgjidhje gjithëpërfshirëse që optimizojnë proceset e biznesit tuaj",
+    metadata: {
+      title: "Shërbimet - DAAT",
+      description: "Zgjidhje gjithëpërfshirëse që optimizojnë proceset e biznesit tuaj"
+    },
     automation: {
       title: "Automatizimi i Proceseve të Biznesit",
       description: "Automatizoni detyrat e përsëritura dhe lejoni ekipin tuaj të përqendrohet në punë më strategjike."
@@ -29,8 +47,8 @@ export default {
       description: "Lidhni sistemet tuaja ekzistuese dhe optimizoni rrjedhën e të dhënave."
     },
     bots: {
-      title: "Chatbot-et dhe Bot-et",
-      description: "Chatbot-e inteligjentë që mbështesin shërbimin ndaj klientit 24/7 dhe bot-e që automatizojnë proceset e biznesit."
+      title: "Zhvillimi i Bot-eve Python",
+      description: "Me ekipin tonë ekspert që specializohet në të gjitha llojet e zhvillimit të bot-eve Python, ne krijojmë bot-e Telegram, Discord, WhatsApp, zgjidhje web scraping, integrimet API dhe bot-e automatizimi të personalizuara. Ne ofrojmë zgjidhje profesionale duke përdorur teknologji moderne Python dhe praktika më të mira."
     },
     workflows: {
       title: "Menaxhimi i Rrjedhës së Punës",
@@ -105,6 +123,43 @@ export default {
     title: "Çfarë Thonë Klientët Tanë",
     subtitle: "Përvojat nga partnerët tanë të biznesit"
   },
+  about: {
+    title: "Rreth Nesh",
+    description: "DAAT është një kompani e specializuar në automatizimin e biznesit dhe teknologjinë e operacioneve financiare. Ne ndihmojmë kompanitë kryesore teknologjike evropiane të digitalizojnë dhe optimizojnë proceset e tyre të biznesit me zgjidhje moderne.",
+    mission: {
+      title: "Misioni Jonë",
+      description: "Të udhëheqim bizneset në udhëtimin e tyre të transformimit dixhital dhe të ofrojmë zgjidhjet më të mira teknologjike. Ne ndihmojmë klientët tanë të rrisin efikasitetin operacional dhe të fitojnë avantazh konkurrues."
+    },
+    vision: {
+      title: "Vizioni Jonë",
+      description: "Të jemi një kompani pionier që lidh teknologjinë me botën e biznesit. Të bëhemi një pikë referimi në automatizimin e biznesit dhe teknologjitë financiare në të gjithë Evropën."
+    },
+    whatWeDo: {
+      title: "Çfarë Bëjmë",
+      automation: {
+        title: "Automatizimi i Proceseve",
+        description: "Ne automatizojmë detyrat e përsëritura për të rritur efikasitetin e biznesit. Ne ofrojmë RPA, menaxhimin e rrjedhës së punës dhe zgjidhje integrimi."
+      },
+      finance: {
+        title: "Operacionet Financiare",
+        description: "Ne digitalizojmë operacionet financiare nga proceset e kontabilitetit deri te raportimi, dashboard-et dhe analiza e të dhënave."
+      },
+      integrations: {
+        title: "Integrimet e Sistemeve",
+        description: "Ne lidhim sistemet tuaja ekzistuese për të optimizuar rrjedhën e të dhënave. Ne ofrojmë integrimet API dhe sinkronizimin e të dhënave."
+      },
+      pythonBots: {
+        title: "Ekspertiza në Zhvillimin e Bot-eve Python",
+        description: "Kemi ekspertizë të thellë në zhvillimin e të gjitha llojeve të bot-eve Python. Ne krijojmë bot-e Telegram, Discord, WhatsApp, zgjidhje web scraping, integrimet API, bot-e mbledhjeje dhe përpunimi të të dhënave, automatizim të mediave sociale dhe zgjidhje bot-e të personalizuara të përshtatura me nevojat tuaja specifike. Ne zhvillojmë bot-e profesionale, të shkallëzueshme dhe të besueshme duke përdorur ekosistemin modern Python (FastAPI, asyncio, aiohttp, selenium, beautifulsoup) dhe praktikat më të mira."
+      }
+    },
+    team: {
+      title: "Ekipi Jonë"
+    },
+    clients: {
+      title: "Klientët Tanë"
+    }
+  },
   faq: {
     title: "Pyetjet e Bëra Shpesh",
     q1: "Me cilat industri punoni?",
@@ -129,7 +184,43 @@ export default {
     submit: "Dërgo",
     sending: "Duke dërguar...",
     success: "Mesazhi juaj u dërgua me sukses!",
-    error: "Ndodhi një gabim. Ju lutemi provoni përsëri."
+    error: "Ndodhi një gabim. Ju lutemi provoni përsëri.",
+    metadata: {
+      title: "Kontakt - DAAT",
+      description: "Na kontaktoni për projektet tuaja"
+    }
+  },
+  services: {
+    title: "Shërbimet Tona",
+    subtitle: "Zgjidhje gjithëpërfshirëse që optimizojnë proceset e biznesit tuaj",
+    metadata: {
+      title: "Shërbimet - DAAT",
+      description: "Zgjidhje gjithëpërfshirëse që optimizojnë proceset e biznesit tuaj"
+    },
+    automation: {
+      title: "Automatizimi i Proceseve të Biznesit",
+      description: "Automatizoni detyrat e përsëritura dhe lejoni ekipin tuaj të përqendrohet në punë më strategjike."
+    },
+    reporting: {
+      title: "Raportimi dhe Dashboard-et",
+      description: "Merrni vendime të informuara me të dhëna në kohë reale. Dashboard-e të personalizueshme dhe raporte të detajuara."
+    },
+    integrations: {
+      title: "Integrimet e Sistemeve",
+      description: "Lidhni sistemet tuaja ekzistuese dhe optimizoni rrjedhën e të dhënave."
+    },
+    bots: {
+      title: "Zhvillimi i Bot-eve Python",
+      description: "Me ekipin tonë ekspert që specializohet në të gjitha llojet e zhvillimit të bot-eve Python, ne krijojmë bot-e Telegram, Discord, WhatsApp, zgjidhje web scraping, integrimet API dhe bot-e automatizimi të personalizuara. Ne ofrojmë zgjidhje profesionale duke përdorur teknologji moderne Python dhe praktika më të mira."
+    },
+    workflows: {
+      title: "Menaxhimi i Rrjedhës së Punës",
+      description: "Vizualizoni, optimizoni dhe menaxhoni proceset tuaja komplekse të biznesit."
+    },
+    consulting: {
+      title: "Këshillimi Teknologjik",
+      description: "Udhëzim ekspert dhe këshillim strategjik në udhëtimin tuaj të transformimit dixhital."
+    }
   },
   footer: {
     company: "DAAT",

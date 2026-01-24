@@ -13,9 +13,27 @@ export default {
     ctaPrimary: "Hemen Başlayın",
     ctaSecondary: "Daha Fazla Bilgi"
   },
+  caseStudies: {
+    metadata: {
+      title: "Vaka Çalışmaları - DAAT",
+      description: "Başarı hikayelerimiz ve müşteri projelerimiz"
+    }
+  },
+  insights: {
+    metadata: {
+      title: "Blog - DAAT",
+      description: "İş otomasyonu, finans operasyonları ve dijital dönüşüm hakkında blog yazıları"
+    },
+    subtitle: "İş otomasyonu, finans operasyonları ve dijital dönüşüm hakkında blog yazıları",
+    readMore: "Devamını Oku"
+  },
   services: {
     title: "Hizmetlerimiz",
     subtitle: "İş süreçlerinizi optimize eden kapsamlı çözümler",
+    metadata: {
+      title: "Hizmetler - DAAT",
+      description: "İş süreçlerinizi optimize eden kapsamlı çözümler"
+    },
     automation: {
       title: "İş Süreci Otomasyonu",
       description: "Tekrarlayan görevleri otomatikleştirin ve ekip üyelerinizin daha stratejik işlere odaklanmasını sağlayın."
@@ -29,8 +47,8 @@ export default {
       description: "Mevcut sistemlerinizi birbirine bağlayın ve veri akışını optimize edin."
     },
     bots: {
-      title: "Chatbot'lar ve Bot'lar",
-      description: "Müşteri hizmetlerini 7/24 destekleyen akıllı chatbot'lar ve iş süreçlerini otomatikleştiren bot'lar."
+      title: "Python Bot Geliştirme",
+      description: "Her türlü Python botu geliştirme konusunda uzman ekibimizle, Telegram, Discord, WhatsApp, web scraping, API entegrasyonları ve özel otomasyon botları geliştiriyoruz. Modern Python teknolojileri ve best practice'lerle profesyonel çözümler sunuyoruz."
     },
     workflows: {
       title: "İş Akışı Yönetimi",
@@ -105,6 +123,43 @@ export default {
     title: "Müşterilerimiz Ne Diyor",
     subtitle: "İş ortaklarımızın deneyimleri"
   },
+  about: {
+    title: "Hakkımızda",
+    description: "DAAT, iş otomasyonu ve finans operasyonları teknolojisi alanında uzmanlaşmış bir şirkettir. Avrupa'nın önde gelen teknoloji firmalarına modern çözümler sunarak iş süreçlerini dijitalleştiriyor ve optimize ediyoruz.",
+    mission: {
+      title: "Misyonumuz",
+      description: "İşletmelerin dijital dönüşüm yolculuğunda onlara rehberlik etmek ve en iyi teknoloji çözümlerini sunmak. Müşterilerimizin operasyonel verimliliğini artırmak ve rekabet avantajı kazanmalarını sağlamak."
+    },
+    vision: {
+      title: "Vizyonumuz",
+      description: "Teknoloji ile iş dünyasını birleştiren öncü bir şirket olmak. Avrupa'da iş otomasyonu ve finans teknolojileri alanında referans noktası haline gelmek."
+    },
+    whatWeDo: {
+      title: "Ne Yapıyoruz?",
+      automation: {
+        title: "İş Süreci Otomasyonu",
+        description: "Tekrarlayan görevleri otomatikleştirerek işletmelerin verimliliğini artırıyoruz. RPA, workflow yönetimi ve entegrasyon çözümleri sunuyoruz."
+      },
+      finance: {
+        title: "Finans Operasyonları",
+        description: "Muhasebe süreçlerinden raporlamaya, dashboard'lardan veri analizine kadar finans operasyonlarını dijitalleştiriyoruz."
+      },
+      integrations: {
+        title: "Sistem Entegrasyonları",
+        description: "Mevcut sistemlerinizi birbirine bağlayarak veri akışını optimize ediyoruz. API entegrasyonları ve veri senkronizasyonu sağlıyoruz."
+      },
+      pythonBots: {
+        title: "Python Bot Geliştirme Uzmanlığı",
+        description: "Her türlü Python botu geliştirme konusunda derin uzmanlığa sahibiz. Telegram, Discord, WhatsApp botları, web scraping, API entegrasyonları, veri toplama ve işleme botları, sosyal medya otomasyonu ve özel ihtiyaçlarınıza göre tasarlanmış bot çözümleri sunuyoruz. Modern Python ekosistemi (FastAPI, asyncio, aiohttp, selenium, beautifulsoup) ve en iyi pratiklerle profesyonel, ölçeklenebilir ve güvenilir botlar geliştiriyoruz."
+      }
+    },
+    team: {
+      title: "Ekibimiz"
+    },
+    clients: {
+      title: "Hizmet Verdiğimiz Firmalar"
+    }
+  },
   faq: {
     title: "Sıkça Sorulan Sorular",
     q1: "Hangi sektörler için çalışıyorsunuz?",
@@ -129,8 +184,20 @@ export default {
     submit: "Gönder",
     sending: "Gönderiliyor...",
     success: "Mesajınız başarıyla gönderildi!",
-    error: "Bir hata oluştu. Lütfen tekrar deneyin."
+    error: "Bir hata oluştu. Lütfen tekrar deneyin.",
+    metadata: {
+      title: "İletişim - DAAT",
+      description: "Bizimle iletişime geçin"
+    }
   },
+  services: {
+    title: "Hizmetlerimiz",
+    subtitle: "İş süreçlerinizi optimize eden kapsamlı çözümler",
+    metadata: {
+      title: "Hizmetler - DAAT",
+      description: "İş süreçlerinizi optimize eden kapsamlı çözümler"
+    },
+    automation: {
   footer: {
     company: "DAAT",
     description: "İş Otomasyonu ve Finans Operasyonları Teknolojisi",

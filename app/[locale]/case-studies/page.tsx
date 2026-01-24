@@ -1,5 +1,5 @@
 import { CaseStudyHighlights } from "@/components/sections/CaseStudyHighlights"
-import { type Locale } from "@/lib/i18n"
+import { type Locale, getTranslations } from "@/lib/i18n"
 import type { Metadata } from "next"
 
 export async function generateMetadata({
@@ -7,12 +7,10 @@ export async function generateMetadata({
 }: {
   params: { locale: Locale }
 }): Promise<Metadata> {
-  const isTR = params.locale === "tr"
+  const t = getTranslations(params.locale)
   return {
-    title: isTR ? "Vaka Çalışmaları - DAAT" : "Case Studies - DAAT",
-    description: isTR
-      ? "Başarı hikayelerimiz ve müşteri projelerimiz"
-      : "Our success stories and client projects",
+    title: t.caseStudies.metadata.title,
+    description: t.caseStudies.metadata.description,
   }
 }
 

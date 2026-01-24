@@ -9,12 +9,10 @@ export async function generateMetadata({
 }: {
   params: { locale: Locale }
 }): Promise<Metadata> {
-  const isTR = params.locale === "tr"
+  const t = getTranslations(params.locale)
   return {
-    title: isTR ? "Hakkımızda - DAAT" : "About - DAAT",
-    description: isTR
-      ? "DAAT hakkında bilgi edinin"
-      : "Learn about DAAT",
+    title: `${t.about.title} - DAAT`,
+    description: t.about.description,
   }
 }
 
@@ -52,8 +50,8 @@ const clients = [
 ]
 
 export default function AboutPage({ params }: { params: { locale: Locale } }) {
-  const isTR = params.locale === "tr"
   const t = getTranslations(params.locale)
+  const about = t.about
   const whyAlbania = t.whyAlbania
 
   return (
@@ -68,37 +66,31 @@ export default function AboutPage({ params }: { params: { locale: Locale } }) {
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text'
             }}>
-              {isTR ? "Hakkımızda" : "About Us"}
+              {about.title}
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              {isTR
-                ? "DAAT, iş otomasyonu ve finans operasyonları teknolojisi alanında uzmanlaşmış bir şirkettir. Avrupa'nın önde gelen teknoloji firmalarına modern çözümler sunarak iş süreçlerini dijitalleştiriyor ve optimize ediyoruz."
-                : "DAAT is a company specialized in business automation and finance operations technology. We help leading European technology companies digitize and optimize their business processes with modern solutions."}
+              {about.description}
             </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 mb-16">
             <Card>
               <CardHeader>
-                <CardTitle>{isTR ? "Misyonumuz" : "Our Mission"}</CardTitle>
+                <CardTitle>{about.mission.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
-                  {isTR
-                    ? "İşletmelerin dijital dönüşüm yolculuğunda onlara rehberlik etmek ve en iyi teknoloji çözümlerini sunmak. Müşterilerimizin operasyonel verimliliğini artırmak ve rekabet avantajı kazanmalarını sağlamak."
-                    : "To guide businesses in their digital transformation journey and provide the best technology solutions. We help our clients increase operational efficiency and gain competitive advantage."}
+                  {about.mission.description}
                 </CardDescription>
               </CardContent>
             </Card>
             <Card>
               <CardHeader>
-                <CardTitle>{isTR ? "Vizyonumuz" : "Our Vision"}</CardTitle>
+                <CardTitle>{about.vision.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
-                  {isTR
-                    ? "Teknoloji ile iş dünyasını birleştiren öncü bir şirket olmak. Avrupa'da iş otomasyonu ve finans teknolojileri alanında referans noktası haline gelmek."
-                    : "To be a leading company that connects technology with the business world. To become a reference point in business automation and finance technologies across Europe."}
+                  {about.vision.description}
                 </CardDescription>
               </CardContent>
             </Card>
@@ -106,42 +98,56 @@ export default function AboutPage({ params }: { params: { locale: Locale } }) {
 
           <div className="mb-16">
             <h2 className="text-3xl font-bold mb-8 text-center">
-              {isTR ? "Ne Yapıyoruz?" : "What We Do"}
+              {about.whatWeDo.title}
             </h2>
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               <Card>
                 <CardHeader>
-                  <CardTitle>{isTR ? "İş Süreci Otomasyonu" : "Process Automation"}</CardTitle>
+                  <CardTitle>{about.whatWeDo.automation.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    {isTR
-                      ? "Tekrarlayan görevleri otomatikleştirerek işletmelerin verimliliğini artırıyoruz. RPA, workflow yönetimi ve entegrasyon çözümleri sunuyoruz."
-                      : "We automate repetitive tasks to increase business efficiency. We provide RPA, workflow management, and integration solutions."}
+                    {about.whatWeDo.automation.description}
                   </CardDescription>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle>{isTR ? "Finans Operasyonları" : "Finance Operations"}</CardTitle>
+                  <CardTitle>{about.whatWeDo.finance.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    {isTR
-                      ? "Muhasebe süreçlerinden raporlamaya, dashboard'lardan veri analizine kadar finans operasyonlarını dijitalleştiriyoruz."
-                      : "We digitize finance operations from accounting processes to reporting, dashboards, and data analysis."}
+                    {about.whatWeDo.finance.description}
                   </CardDescription>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle>{isTR ? "Sistem Entegrasyonları" : "System Integrations"}</CardTitle>
+                  <CardTitle>{about.whatWeDo.integrations.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    {isTR
-                      ? "Mevcut sistemlerinizi birbirine bağlayarak veri akışını optimize ediyoruz. API entegrasyonları ve veri senkronizasyonu sağlıyoruz."
-                      : "We connect your existing systems to optimize data flow. We provide API integrations and data synchronization."}
+                    {about.whatWeDo.integrations.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
+              <Card className="border-2" style={{
+                borderColor: 'rgba(200, 154, 61, 0.3)',
+                background: 'linear-gradient(135deg, rgba(242, 184, 75, 0.05) 0%, rgba(200, 154, 61, 0.08) 100%)'
+              }}>
+                <CardHeader>
+                  <div className="mb-4 h-12 w-12 rounded-2xl flex items-center justify-center" style={{
+                    background: 'linear-gradient(135deg, rgba(242, 184, 75, 0.15) 0%, rgba(200, 154, 61, 0.1) 100%)'
+                  }}>
+                    <svg className="h-6 w-6" style={{ color: '#C89A3D' }} fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M9.585 11.692h4.328s2.432.739 2.432-2.961c0-2.322-1.769-2.322-1.769-2.322h-3.362v10.075h-1.629V6.39H7.108s-3.953.116-3.953 4.676c0 4.442 3.953 4.676 3.953 4.676h1.477v-4.05zm-1.589-4.676h2.692s1.332.027 1.332 1.353c0 1.324-1.332 1.353-1.332 1.353H8.108V7.016h-.112z"/>
+                    </svg>
+                  </div>
+                  <CardTitle>{about.whatWeDo.pythonBots.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>
+                    {about.whatWeDo.pythonBots.description}
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -266,7 +272,7 @@ export default function AboutPage({ params }: { params: { locale: Locale } }) {
 
           <div className="mb-16">
             <h2 className="text-3xl font-bold mb-8 text-center">
-              {isTR ? "Ekibimiz" : "Our Team"}
+              {about.team.title}
             </h2>
             <div className="grid gap-8 md:grid-cols-3">
               {team.map((member) => (
@@ -309,7 +315,7 @@ export default function AboutPage({ params }: { params: { locale: Locale } }) {
 
           <div className="mb-16">
             <h2 className="text-3xl font-bold mb-8 text-center">
-              {isTR ? "Hizmet Verdiğimiz Firmalar" : "Our Clients"}
+              {about.clients.title}
             </h2>
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
               {clients.map((client, index) => (

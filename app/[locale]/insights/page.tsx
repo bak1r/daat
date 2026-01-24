@@ -12,12 +12,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const t = getTranslations(params.locale)
   return {
-    title: `${t.nav.insights} - DAAT`,
-    description: params.locale === "tr"
-      ? "İş otomasyonu, finans operasyonları ve dijital dönüşüm hakkında blog yazıları"
-      : params.locale === "al"
-      ? "Artikuj blogu për automatizimin e biznesit, operacionet financiare dhe transformimin dixhital"
-      : "Blog posts about business automation, finance operations, and digital transformation",
+    title: t.insights.metadata.title,
+    description: t.insights.metadata.description,
   }
 }
 
@@ -139,11 +135,7 @@ export default function InsightsPage({ params }: { params: { locale: Locale } })
             {t.nav.insights}
           </h1>
           <p className="text-lg text-muted-foreground text-center mb-12">
-            {params.locale === "tr"
-              ? "İş otomasyonu, finans operasyonları ve dijital dönüşüm hakkında blog yazıları"
-              : params.locale === "al"
-              ? "Artikuj blogu për automatizimin e biznesit, operacionet financiare dhe transformimin dixhital"
-              : "Blog posts about business automation, finance operations, and digital transformation"}
+            {t.insights.subtitle}
           </p>
           <div className="grid gap-6 md:grid-cols-2">
             {posts.map((post) => {
@@ -171,7 +163,7 @@ export default function InsightsPage({ params }: { params: { locale: Locale } })
                       className="font-medium transition-colors hover:underline"
                       style={{ color: '#C89A3D' }}
                     >
-                      {params.locale === "tr" ? "Devamını Oku" : params.locale === "al" ? "Lexo Më Shumë" : "Read More"} →
+                      {t.insights.readMore} →
                     </Link>
                   </CardContent>
                 </Card>

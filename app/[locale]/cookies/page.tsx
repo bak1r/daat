@@ -7,13 +7,14 @@ export async function generateMetadata({
   params: { locale: Locale }
 }): Promise<Metadata> {
   const t = getTranslations(params.locale)
+  const content = {
+    tr: { description: "Çerez politikası ve kullanım bilgileri" },
+    en: { description: "Cookie policy and usage information" },
+    al: { description: "Politika e cookies dhe informacioni i përdorimit" },
+  }
   return {
     title: `${t.footer.legal.cookies} - DAAT`,
-    description: params.locale === "tr"
-      ? "Çerez politikası ve kullanım bilgileri"
-      : params.locale === "al"
-      ? "Politika e cookies dhe informacioni i përdorimit"
-      : "Cookie policy and usage information",
+    description: content[params.locale].description,
   }
 }
 

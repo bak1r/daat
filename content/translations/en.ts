@@ -13,9 +13,27 @@ export default {
     ctaPrimary: "Get Started",
     ctaSecondary: "Learn More"
   },
+  caseStudies: {
+    metadata: {
+      title: "Case Studies - DAAT",
+      description: "Our success stories and client projects"
+    }
+  },
+  insights: {
+    metadata: {
+      title: "Blog - DAAT",
+      description: "Blog posts about business automation, finance operations, and digital transformation"
+    },
+    subtitle: "Blog posts about business automation, finance operations, and digital transformation",
+    readMore: "Read More"
+  },
   services: {
     title: "Our Services",
     subtitle: "Comprehensive solutions that optimize your business processes",
+    metadata: {
+      title: "Services - DAAT",
+      description: "Comprehensive solutions that optimize your business processes"
+    },
     automation: {
       title: "Business Process Automation",
       description: "Automate repetitive tasks and enable your team to focus on more strategic work."
@@ -29,8 +47,8 @@ export default {
       description: "Connect your existing systems and optimize data flow."
     },
     bots: {
-      title: "Chatbots & Bots",
-      description: "Smart chatbots that support customer service 24/7 and bots that automate business processes."
+      title: "Python Bot Development",
+      description: "With our expert team specializing in all types of Python bot development, we create Telegram, Discord, WhatsApp bots, web scraping solutions, API integrations, and custom automation bots. We deliver professional solutions using modern Python technologies and best practices."
     },
     workflows: {
       title: "Workflow Management",
@@ -105,6 +123,43 @@ export default {
     title: "What Our Clients Say",
     subtitle: "Experiences from our business partners"
   },
+  about: {
+    title: "About Us",
+    description: "DAAT is a company specialized in business automation and finance operations technology. We help leading European technology companies digitize and optimize their business processes with modern solutions.",
+    mission: {
+      title: "Our Mission",
+      description: "To guide businesses in their digital transformation journey and provide the best technology solutions. We help our clients increase operational efficiency and gain competitive advantage."
+    },
+    vision: {
+      title: "Our Vision",
+      description: "To be a leading company that connects technology with the business world. To become a reference point in business automation and finance technologies across Europe."
+    },
+    whatWeDo: {
+      title: "What We Do",
+      automation: {
+        title: "Process Automation",
+        description: "We automate repetitive tasks to increase business efficiency. We provide RPA, workflow management, and integration solutions."
+      },
+      finance: {
+        title: "Finance Operations",
+        description: "We digitize finance operations from accounting processes to reporting, dashboards, and data analysis."
+      },
+      integrations: {
+        title: "System Integrations",
+        description: "We connect your existing systems to optimize data flow. We provide API integrations and data synchronization."
+      },
+      pythonBots: {
+        title: "Python Bot Development Expertise",
+        description: "We have deep expertise in developing all types of Python bots. We create Telegram, Discord, WhatsApp bots, web scraping solutions, API integrations, data collection and processing bots, social media automation, and custom bot solutions tailored to your specific needs. We develop professional, scalable, and reliable bots using the modern Python ecosystem (FastAPI, asyncio, aiohttp, selenium, beautifulsoup) and best practices."
+      }
+    },
+    team: {
+      title: "Our Team"
+    },
+    clients: {
+      title: "Our Clients"
+    }
+  },
   faq: {
     title: "Frequently Asked Questions",
     q1: "Which industries do you work with?",
@@ -129,8 +184,20 @@ export default {
     submit: "Send",
     sending: "Sending...",
     success: "Your message has been sent successfully!",
-    error: "An error occurred. Please try again."
+    error: "An error occurred. Please try again.",
+    metadata: {
+      title: "Contact - DAAT",
+      description: "Get in touch with us"
+    }
   },
+  services: {
+    title: "Our Services",
+    subtitle: "Comprehensive solutions that optimize your business processes",
+    metadata: {
+      title: "Services - DAAT",
+      description: "Comprehensive solutions that optimize your business processes"
+    },
+    automation: {
   footer: {
     company: "DAAT",
     description: "Business Automation & Finance Ops Tech",

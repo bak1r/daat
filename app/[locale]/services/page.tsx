@@ -1,5 +1,5 @@
 import { ServicesGrid } from "@/components/sections/ServicesGrid"
-import { type Locale } from "@/lib/i18n"
+import { type Locale, getTranslations } from "@/lib/i18n"
 import type { Metadata } from "next"
 
 export async function generateMetadata({
@@ -7,12 +7,10 @@ export async function generateMetadata({
 }: {
   params: { locale: Locale }
 }): Promise<Metadata> {
-  const isTR = params.locale === "tr"
+  const t = getTranslations(params.locale)
   return {
-    title: isTR ? "Hizmetler - DAAT" : "Services - DAAT",
-    description: isTR
-      ? "İş süreçlerinizi optimize eden kapsamlı çözümler"
-      : "Comprehensive solutions that optimize your business processes",
+    title: t.services.metadata.title,
+    description: t.services.metadata.description,
   }
 }
 

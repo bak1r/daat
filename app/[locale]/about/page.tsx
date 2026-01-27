@@ -37,16 +37,18 @@ const team = [
   },
 ]
 
-// NOT: Generic/sahte müşteri listesi - Gerçek müşterileriniz olduğunda izinle değiştirin
+// NOT: Tamamen hayali/generic müşteri listesi - Gerçek şirket isimleri kullanılmamıştır
 const clients = [
-  "TechFlux Solutions - Stockholm, Sweden",
-  "Nordik Data Systems - Oslo, Norway",
-  "Alpina Tech Group - Zurich, Switzerland",
-  "Baltic Innovators - Tallinn, Estonia",
-  "Skandinavian Digital - Copenhagen, Denmark",
-  "Centrale European Technologies - Vienna, Austria",
-  "Mediterranea Software - Barcelona, Spain",
-  "Atlantik Business Solution - Dublin, Ireland",
+  "ApexTech Solutions",
+  "Nexus Digital Works",
+  "Vertex Data Systems",
+  "Quantum Innovations",
+  "Catalyst Software Labs",
+  "Pulse Tech",
+  "Synergy Automation",
+  "CodeForge Works",
+  "Digital Nexus Solutions",
+  "TechSphere Partners",
 ]
 
 export default function AboutPage({ params }: { params: { locale: Locale } }) {

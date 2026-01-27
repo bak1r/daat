@@ -115,7 +115,7 @@ export function Footer({ locale }: FooterProps) {
             <div className="space-y-2 text-sm text-muted-foreground">
               <p>Rruga Artan Lenja 81HX+F94 Tiran, Arnavutluk</p>
               <p>info@daat.com</p>
-              <p>+38268186300</p>
+              <p>+355693788480</p>
             </div>
           </div>
         </div>

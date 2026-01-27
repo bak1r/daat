@@ -86,7 +86,7 @@ export function Header({ locale, onLocaleChange }: HeaderProps) {
 
         <div className="flex items-center space-x-3">
           <a
-            href="https://wa.me/38268186300"
+            href="https://wa.me/355693788480"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-sm font-medium text-white bg-[#25D366] hover:bg-[#20BA5A] transition-all duration-300 px-3 py-2 rounded-lg shadow-sm hover:shadow-md hover:scale-105 active:scale-95"

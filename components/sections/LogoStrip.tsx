@@ -7,38 +7,58 @@ interface LogoStripProps {
 export function LogoStrip({ locale }: LogoStripProps) {
   const t = getTranslations(locale)
   
-  // NOT: Generic partner logoları ve isimleri - Gerçek müşterileriniz olduğunda izinle değiştirin
-  // Tüm logolar orijinal SVG tasarımlardır, yasal sorun çıkarmaz
+  // NOT: Tamamen hayali/generic partner logoları ve isimleri
+  // Tüm logolar orijinal SVG tasarımlardır, gerçek şirket isimleri kullanılmamıştır
   const clients = [
     {
       id: 1,
-      name: "TechFlux Solutions",
-      logo: "/images/logos/techflux-solutions.svg",
+      name: "ApexTech Solutions",
+      logo: "/images/logos/apextech-solutions.svg",
     },
     {
       id: 2,
-      name: "Nordik Data Systems",
-      logo: "/images/logos/nordik-data-systems.svg",
+      name: "Nexus Digital Works",
+      logo: "/images/logos/nexus-digital.svg",
     },
     {
       id: 3,
-      name: "Alpina Tech Group",
-      logo: "/images/logos/alpina-tech-group.svg",
+      name: "Vertex Data Systems",
+      logo: "/images/logos/vertex-data.svg",
     },
     {
       id: 4,
-      name: "Baltic Innovators",
-      logo: "/images/logos/baltic-innovators.svg",
+      name: "Quantum Innovations",
+      logo: "/images/logos/quantum-innovations.svg",
     },
     {
       id: 5,
-      name: "Skandinavian Digital",
-      logo: "/images/logos/skandinavian-digital.svg",
+      name: "Catalyst Software Labs",
+      logo: "/images/logos/catalyst-software.svg",
     },
     {
       id: 6,
-      name: "Centrale European Technologies",
-      logo: "/images/logos/centrale-european-tech.svg",
+      name: "Pulse Tech",
+      logo: "/images/logos/pulse-tech.svg",
+    },
+    {
+      id: 7,
+      name: "Synergy Automation",
+      logo: "/images/logos/synergy-automation.svg",
+    },
+    {
+      id: 8,
+      name: "CodeForge Works",
+      logo: "/images/logos/codeforge-works.svg",
+    },
+    {
+      id: 9,
+      name: "Digital Nexus Solutions",
+      logo: "/images/logos/digital-nexus.svg",
+    },
+    {
+      id: 10,
+      name: "TechSphere Partners",
+      logo: "/images/logos/techsphere-partners.svg",
     },
   ]
 

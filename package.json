@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "generate-kb": "ts-node scripts/generate-knowledge-base.ts",
+    "generate-kb": "npx ts-node scripts/generate-knowledge-base.ts",
     "prebuild": "npm run generate-kb"
   },
   "dependencies": {

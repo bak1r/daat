@@ -40,7 +40,7 @@ export function Header({ locale, onLocaleChange }: HeaderProps) {
     if (loc === "al") {
       return (
         <img
-          src="/images/Flag_of_Albania.svg"
+          src="/images/Flag_of_Albania.svg.webp"
           alt="Albania Flag"
           className="w-5 h-4 object-cover rounded-sm"
         />

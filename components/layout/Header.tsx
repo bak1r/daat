@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { Menu, X, Globe } from "lucide-react"
 import { useState, useEffect } from "react"
@@ -36,13 +37,22 @@ export function Header({ locale, onLocaleChange }: HeaderProps) {
     return "al"
   }
 
+  const [alFlagError, setAlFlagError] = useState(false)
+
   const getLocaleDisplay = (loc: Locale) => {
     if (loc === "al") {
+      if (alFlagError) {
+        return <span className="text-sm font-medium w-5 text-center">AL</span>
+      }
       return (
-        <img
+        <Image
           src="/images/Flag_of_Albania.svg.webp"
           alt="Albania Flag"
+          width={20}
+          height={16}
           className="w-5 h-4 object-cover rounded-sm"
+          onError={() => setAlFlagError(true)}
+          unoptimized
         />
       )
     }

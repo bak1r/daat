@@ -1,0 +1,308 @@
+[
+  {
+    "locale": "al",
+    "sections": {
+      "services": [
+        {
+          "title": "Automatizimi i Proceseve të Biznesit",
+          "description": "Automatizoni detyrat e përsëritura dhe lejoni ekipin tuaj të përqendrohet në punë më strategjike."
+        },
+        {
+          "title": "Raportimi dhe Dashboard-et",
+          "description": "Merrni vendime të informuara me të dhëna në kohë reale. Dashboard-e të personalizueshme dhe raporte të detajuara."
+        },
+        {
+          "title": "Integrimet e Sistemeve",
+          "description": "Lidhni sistemet tuaja ekzistuese dhe optimizoni rrjedhën e të dhënave."
+        },
+        {
+          "title": "Chatbot-et dhe Bot-et",
+          "description": "Chatbot-e inteligjentë që mbështesin shërbimin ndaj klientit 24/7 dhe bot-e që automatizojnë proceset e biznesit."
+        },
+        {
+          "title": "Menaxhimi i Rrjedhës së Punës",
+          "description": "Vizualizoni, optimizoni dhe menaxhoni proceset tuaja komplekse të biznesit."
+        },
+        {
+          "title": "Këshillimi Teknologjik",
+          "description": "Udhëzim ekspert dhe këshillim strategjik në udhëtimin tuaj të transformimit dixhital."
+        }
+      ],
+      "process": [
+        {
+          "title": "Zbulimi",
+          "description": "Analizojmë nevojat tuaja dhe dizajnojmë zgjidhjen më të mirë."
+        },
+        {
+          "title": "Ndërtimi",
+          "description": "Zhvillojmë zgjidhjet tuaja të personalizuara me teknologji moderne."
+        },
+        {
+          "title": "Vendosja",
+          "description": "Lansojmë zgjidhjet tuaja në mënyrë të sigurt."
+        },
+        {
+          "title": "Mbështetja",
+          "description": "Jemi këtu me mbështetje të vazhdueshme dhe përmirësime."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Me cilat industri punoni?",
+          "answer": "Ofrojmë zgjidhje për tregtinë elektronike, pakicën, sektorin e shërbimeve dhe më shumë."
+        },
+        {
+          "question": "Sa kohë zgjat një projekt?",
+          "answer": "Ndryshon sipas shtrirjes së projektit, zakonisht përfundon brenda 2-8 javëve."
+        },
+        {
+          "question": "A mund të integrohet me sistemet tona ekzistuese?",
+          "answer": "Po, mund të integrohemi me sistemet tuaja ekzistuese."
+        },
+        {
+          "question": "A ofroni shërbime mbështetjeje?",
+          "answer": "Po, ofrojmë mbështetje dhe shërbime mirëmbajtjeje të vazhdueshme pas përfundimit të projektit."
+        },
+        {
+          "question": "Si është çmimi?",
+          "answer": "Ofrojmë çmimim të personalizuar bazuar në projekt. Na kontaktoni për detaje."
+        },
+        {
+          "question": "Ku ofroni shërbime?",
+          "answer": "Bazuar në Shqipëri, shërbejmë klientë globalë."
+        }
+      ],
+      "contact": {
+        "address": "Rruga Artan Lenja 81HX+F94, Tiran, Arnavutluk",
+        "email": "info@daat.com",
+        "phone": "+355693788480"
+      },
+      "about": {
+        "mission": "Pse Shqipëria? - Ne jemi këtu për të transformuar ekosistemin dixhital të Shqipërisë",
+        "whyAlbania": "Shqipëria ofron fusha të shumta për inovacion dhe rritje teknologjike:",
+        "value": "Ne kontribuojmë në ekosistemin teknologjik të Shqipërisë në mënyra të shumta:",
+        "team": [
+          {
+            "name": "Orhan Erdem",
+            "role": "Bashkëthemelues & Drejtues i Teknologjisë",
+            "bio": "10+ vite përvojë në arkitekturë software dhe sisteme automatizimi biznesi."
+          },
+          {
+            "name": "Onur Bolukbasi",
+            "role": "Bashkëthemelues & Drejtues i Operacioneve",
+            "bio": "Ekspert në menaxhim operacionesh dhe optimizim procesesh me fokus në finance-tech."
+          },
+          {
+            "name": "Suheda Nur",
+            "role": "Drejtore",
+            "bio": "Udhëheqëse strategjike me përvojë në zhvillim biznesi dhe marrëdhënie me klientët."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "locale": "en",
+    "sections": {
+      "services": [
+        {
+          "title": "Business Process Automation",
+          "description": "Automate repetitive tasks and enable your team to focus on more strategic work."
+        },
+        {
+          "title": "Reporting & Dashboards",
+          "description": "Make informed decisions with real-time data. Customizable dashboards and detailed reports."
+        },
+        {
+          "title": "System Integrations",
+          "description": "Connect your existing systems and optimize data flow."
+        },
+        {
+          "title": "Chatbots & Bots",
+          "description": "Smart chatbots that support customer service 24/7 and bots that automate business processes."
+        },
+        {
+          "title": "Workflow Management",
+          "description": "Visualize, optimize, and manage your complex business processes."
+        },
+        {
+          "title": "Technology Consulting",
+          "description": "Expert guidance and strategic consulting on your digital transformation journey."
+        }
+      ],
+      "process": [
+        {
+          "title": "Discovery",
+          "description": "We analyze your needs and design the best solution."
+        },
+        {
+          "title": "Build",
+          "description": "We develop your custom solutions with modern technologies."
+        },
+        {
+          "title": "Deploy",
+          "description": "We safely launch your solutions."
+        },
+        {
+          "title": "Support",
+          "description": "We're here with continuous support and improvements."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Which industries do you work with?",
+          "answer": "We provide solutions for e-commerce, retail, service sector, and more."
+        },
+        {
+          "question": "How long does a project take?",
+          "answer": "Varies by project scope, typically completed within 2-8 weeks."
+        },
+        {
+          "question": "Can it integrate with our existing systems?",
+          "answer": "Yes, we can integrate with your existing systems."
+        },
+        {
+          "question": "Do you offer support services?",
+          "answer": "Yes, we provide ongoing support and maintenance services after project completion."
+        },
+        {
+          "question": "How is pricing?",
+          "answer": "We offer custom project-based pricing. Contact us for details."
+        },
+        {
+          "question": "Where do you provide services?",
+          "answer": "Based in Albania, we serve global clients."
+        }
+      ],
+      "contact": {
+        "address": "Rruga Artan Lenja 81HX+F94, Tiran, Arnavutluk",
+        "email": "info@daat.com",
+        "phone": "+355693788480"
+      },
+      "about": {
+        "mission": "Why Albania? - We're here to transform Albania's digital ecosystem",
+        "whyAlbania": "Albania offers multiple fields for innovation and technological growth:",
+        "value": "We contribute to Albania's technology ecosystem in multiple ways:",
+        "team": [
+          {
+            "name": "Orhan Erdem",
+            "role": "Co-Founder & Head of Technology",
+            "bio": "10+ years of experience in software architecture and business automation systems."
+          },
+          {
+            "name": "Onur Bolukbasi",
+            "role": "Co-Founder & Head of Operations",
+            "bio": "Expert in operations management and process optimization with a strong background in finance technology."
+          },
+          {
+            "name": "Suheda Nur",
+            "role": "Director",
+            "bio": "Strategic leader with extensive experience in business development and client relations."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "locale": "tr",
+    "sections": {
+      "services": [
+        {
+          "title": "İş Süreci Otomasyonu",
+          "description": "Tekrarlayan görevleri otomatikleştirin ve ekip üyelerinizin daha stratejik işlere odaklanmasını sağlayın."
+        },
+        {
+          "title": "Raporlama ve Dashboard'lar",
+          "description": "Gerçek zamanlı verilerle bilinçli kararlar alın. Özelleştirilebilir dashboard'lar ve detaylı raporlar."
+        },
+        {
+          "title": "Sistem Entegrasyonları",
+          "description": "Mevcut sistemlerinizi birbirine bağlayın ve veri akışını optimize edin."
+        },
+        {
+          "title": "Chatbot'lar ve Bot'lar",
+          "description": "Müşteri hizmetlerini 7/24 destekleyen akıllı chatbot'lar ve iş süreçlerini otomatikleştiren bot'lar."
+        },
+        {
+          "title": "İş Akışı Yönetimi",
+          "description": "Karmaşık iş süreçlerinizi görselleştirin, optimize edin ve yönetin."
+        },
+        {
+          "title": "Teknoloji Danışmanlığı",
+          "description": "Dijital dönüşüm yolculuğunuzda uzman rehberliği ve stratejik danışmanlık."
+        }
+      ],
+      "process": [
+        {
+          "title": "Keşif",
+          "description": "İhtiyaçlarınızı analiz ediyor ve en iyi çözümü tasarlıyoruz."
+        },
+        {
+          "title": "Geliştirme",
+          "description": "Modern teknolojilerle özel çözümlerinizi geliştiriyoruz."
+        },
+        {
+          "title": "Dağıtım",
+          "description": "Çözümlerinizi güvenli bir şekilde hayata geçiriyoruz."
+        },
+        {
+          "title": "Destek",
+          "description": "Sürekli destek ve iyileştirmelerle yanınızdayız."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Hangi sektörler için çalışıyorsunuz?",
+          "answer": "E-ticaret, perakende, hizmet sektörü ve daha fazlası için çözümler sunuyoruz."
+        },
+        {
+          "question": "Proje süresi ne kadar?",
+          "answer": "Proje kapsamına göre değişmekle birlikte, genellikle 2-8 hafta arasında tamamlanır."
+        },
+        {
+          "question": "Mevcut sistemlerimizle entegre olabilir mi?",
+          "answer": "Evet, mevcut sistemlerinizle entegrasyon sağlayabiliriz."
+        },
+        {
+          "question": "Destek hizmeti sunuyor musunuz?",
+          "answer": "Evet, proje sonrası sürekli destek ve bakım hizmeti sunuyoruz."
+        },
+        {
+          "question": "Fiyatlandırma nasıl?",
+          "answer": "Proje bazlı özel fiyatlandırma yapıyoruz. Detaylar için iletişime geçin."
+        },
+        {
+          "question": "Nerede hizmet veriyorsunuz?",
+          "answer": "Albania merkezli olmakla birlikte, global müşterilere hizmet veriyoruz."
+        }
+      ],
+      "contact": {
+        "address": "Rruga Artan Lenja 81HX+F94, Tiran, Arnavutluk",
+        "email": "info@daat.com",
+        "phone": "+355693788480"
+      },
+      "about": {
+        "mission": "Neden Arnavutluk? - Arnavutluk'un dijital ekosistemini dönüştürmek için buradayız",
+        "whyAlbania": "Arnavutluk teknoloji inovasyonu ve büyüme için birçok fırsat sunuyor:",
+        "value": "Arnavutluk'un teknoloji ekosistemine birçok şekilde katkı sağlıyoruz:",
+        "team": [
+          {
+            "name": "Orhan Erdem",
+            "role": "Kurucu Ortak & Teknoloji Lideri",
+            "bio": "Yazılım mimarisi ve iş otomasyonu sistemlerinde 10+ yıl deneyim."
+          },
+          {
+            "name": "Onur Bolukbasi",
+            "role": "Kurucu Ortak & Operasyon Lideri",
+            "bio": "Finans teknolojileri odağında operasyon yönetimi ve süreç optimizasyonu uzmanı."
+          },
+          {
+            "name": "Suheda Nur",
+            "role": "Direktör",
+            "bio": "İş geliştirme ve müşteri ilişkilerinde deneyimli stratejik lider."
+          }
+        ]
+      }
+    }
+  }
+]

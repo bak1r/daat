@@ -11,172 +11,183 @@ export function WhyAlbania({ locale }: WhyAlbaniaProps) {
   const data = t.whyAlbania
 
   return (
-    <section className="relative py-20 overflow-x-hidden" style={{
-      background: 'linear-gradient(135deg, rgba(242, 184, 75, 0.03) 0%, rgba(200, 154, 61, 0.05) 45%, rgba(44, 74, 110, 0.03) 75%, rgba(10, 22, 40, 0.02) 100%)'
-    }}>
-      {/* Decorative elements */}
+    <section className="relative section-spacing overflow-x-hidden bg-gradient-to-br from-background via-daat-gold/3 to-background">
+      {/* Premium background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-0 w-96 h-96 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" style={{
-          background: 'linear-gradient(135deg, rgba(200, 154, 61, 0.08) 0%, rgba(44, 74, 110, 0.05) 100%)'
-        }}></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" style={{
-          background: 'linear-gradient(135deg, rgba(242, 184, 75, 0.1) 0%, rgba(200, 154, 61, 0.08) 100%)'
-        }}></div>
+        <div 
+          className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full blur-3xl opacity-20 animate-blob"
+          style={{
+            background: 'radial-gradient(circle, rgba(200,154,61,0.3) 0%, rgba(44,74,110,0.2) 50%, transparent 70%)'
+          }}
+        />
+        <div 
+          className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full blur-3xl opacity-25 animate-blob-delayed"
+          style={{
+            background: 'radial-gradient(circle, rgba(242,184,75,0.4) 0%, rgba(200,154,61,0.2) 50%, transparent 70%)'
+          }}
+        />
       </div>
 
       <div className="container px-4 sm:px-6 lg:px-8 max-w-full relative z-10">
-        <div className="mx-auto max-w-2xl text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+        <div className="mx-auto max-w-3xl text-center mb-16">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-6 gradient-text-gold">
             {data.title}
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg sm:text-xl text-foreground/70">
             {data.subtitle}
           </p>
         </div>
 
-        {/* Why Albania Stats */}
+        {/* Premium Stats Cards */}
         <div className="grid gap-6 md:grid-cols-3 mb-16">
-          <Card className="relative overflow-hidden border-2 border-daat-steel/20 hover:border-daat-gold/40 transition-colors">
-            <div className="absolute top-0 right-0 w-32 h-32 rounded-full -translate-y-16 translate-x-16" style={{
-              background: 'linear-gradient(135deg, rgba(44, 74, 110, 0.1) 0%, rgba(11, 31, 59, 0.05) 100%)'
-            }}></div>
+          <Card variant="premium" className="relative group overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 rounded-full blur-2xl opacity-50 group-hover:opacity-70 transition-opacity" style={{
+              background: 'radial-gradient(circle, rgba(44,74,110,0.4) 0%, transparent 70%)'
+            }}/>
             <CardHeader>
-              <div className="text-5xl font-bold mb-2" style={{ color: '#0B1F3B' }}>{data.why.stat1}</div>
-              <CardTitle className="text-lg text-daat-dark">{data.why.stat1Label}</CardTitle>
+              <div className="text-6xl md:text-7xl font-bold mb-3 bg-gradient-to-br from-daat-dark via-daat-dark to-daat-steel bg-clip-text text-transparent">
+                {data.why.stat1}
+              </div>
+              <CardTitle className="text-lg font-semibold">{data.why.stat1Label}</CardTitle>
             </CardHeader>
             <CardContent>
-              <CardDescription className="text-base">{data.why.stat1Desc}</CardDescription>
+              <CardDescription className="text-base leading-relaxed">{data.why.stat1Desc}</CardDescription>
             </CardContent>
           </Card>
 
-          <Card className="relative overflow-hidden border-2 border-daat-gold/20 hover:border-daat-gold/40 transition-colors">
-            <div className="absolute top-0 right-0 w-32 h-32 rounded-full -translate-y-16 translate-x-16" style={{
-              background: 'linear-gradient(135deg, rgba(242, 184, 75, 0.15) 0%, rgba(200, 154, 61, 0.1) 100%)'
-            }}></div>
+          <Card variant="premium" className="relative group overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 rounded-full blur-2xl opacity-50 group-hover:opacity-70 transition-opacity" style={{
+              background: 'radial-gradient(circle, rgba(242,184,75,0.6) 0%, transparent 70%)'
+            }}/>
             <CardHeader>
-              <div className="text-5xl font-bold mb-2" style={{ color: '#C89A3D' }}>{data.why.stat2}</div>
-              <CardTitle className="text-lg text-daat-dark">{data.why.stat2Label}</CardTitle>
+              <div className="text-6xl md:text-7xl font-bold mb-3 bg-gradient-to-br from-daat-gold via-daat-gold to-daat-goldLight bg-clip-text text-transparent">
+                {data.why.stat2}
+              </div>
+              <CardTitle className="text-lg font-semibold">{data.why.stat2Label}</CardTitle>
             </CardHeader>
             <CardContent>
-              <CardDescription className="text-base">{data.why.stat2Desc}</CardDescription>
+              <CardDescription className="text-base leading-relaxed">{data.why.stat2Desc}</CardDescription>
             </CardContent>
           </Card>
 
-          <Card className="relative overflow-hidden border-2 border-daat-steel/20 hover:border-daat-gold/40 transition-colors">
-            <div className="absolute top-0 right-0 w-32 h-32 rounded-full -translate-y-16 translate-x-16" style={{
-              background: 'linear-gradient(135deg, rgba(44, 74, 110, 0.1) 0%, rgba(11, 31, 59, 0.05) 100%)'
-            }}></div>
+          <Card variant="premium" className="relative group overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 rounded-full blur-2xl opacity-50 group-hover:opacity-70 transition-opacity" style={{
+              background: 'radial-gradient(circle, rgba(44,74,110,0.4) 0%, transparent 70%)'
+            }}/>
             <CardHeader>
-              <div className="text-5xl font-bold mb-2" style={{ color: '#0B1F3B' }}>{data.why.stat3}</div>
-              <CardTitle className="text-lg text-daat-dark">{data.why.stat3Label}</CardTitle>
+              <div className="text-6xl md:text-7xl font-bold mb-3 bg-gradient-to-br from-daat-dark via-daat-dark to-daat-steel bg-clip-text text-transparent">
+                {data.why.stat3}
+              </div>
+              <CardTitle className="text-lg font-semibold">{data.why.stat3Label}</CardTitle>
             </CardHeader>
             <CardContent>
-              <CardDescription className="text-base">{data.why.stat3Desc}</CardDescription>
+              <CardDescription className="text-base leading-relaxed">{data.why.stat3Desc}</CardDescription>
             </CardContent>
           </Card>
         </div>
 
-        {/* Main Cards Grid */}
+        {/* Main Feature Cards Grid */}
         <div className="grid gap-8 md:grid-cols-2">
           {/* Innovation Opportunities */}
-          <Card className="hover:shadow-soft-lg transition-shadow border-2" style={{ borderColor: 'rgba(200, 154, 61, 0.2)' }}>
+          <Card variant="premium" className="group">
             <CardHeader>
-              <div className="mb-4 h-12 w-12 rounded-2xl flex items-center justify-center" style={{
-                background: 'linear-gradient(135deg, rgba(242, 184, 75, 0.15) 0%, rgba(200, 154, 61, 0.1) 100%)'
-              }}>
-                <Lightbulb className="h-6 w-6" style={{ color: '#C89A3D' }} />
+              <div className="mb-6 relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-daat-gold/20 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity"/>
+                <div className="relative h-14 w-14 rounded-2xl bg-gradient-to-br from-daat-gold/10 to-daat-goldLight/5 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Lightbulb className="h-7 w-7 text-daat-gold" />
+                </div>
               </div>
-              <CardTitle className="text-2xl text-daat-dark">{data.innovation.title}</CardTitle>
+              <CardTitle className="text-2xl font-bold mb-3">{data.innovation.title}</CardTitle>
+              <p className="text-foreground/70 leading-relaxed">{data.innovation.desc}</p>
             </CardHeader>
             <CardContent>
-              <p className="mb-4 text-muted-foreground">{data.innovation.desc}</p>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: '#C89A3D' }} />
-                  <span className="text-sm">{data.innovation.point1}</span>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3 group/item">
+                  <CheckCircle2 className="h-5 w-5 mt-0.5 flex-shrink-0 text-daat-gold group-hover/item:scale-110 transition-transform" />
+                  <span className="text-sm leading-relaxed">{data.innovation.point1}</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: '#C89A3D' }} />
-                  <span className="text-sm">{data.innovation.point2}</span>
+                <li className="flex items-start gap-3 group/item">
+                  <CheckCircle2 className="h-5 w-5 mt-0.5 flex-shrink-0 text-daat-gold group-hover/item:scale-110 transition-transform" />
+                  <span className="text-sm leading-relaxed">{data.innovation.point2}</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: '#C89A3D' }} />
-                  <span className="text-sm">{data.innovation.point3}</span>
+                <li className="flex items-start gap-3 group/item">
+                  <CheckCircle2 className="h-5 w-5 mt-0.5 flex-shrink-0 text-daat-gold group-hover/item:scale-110 transition-transform" />
+                  <span className="text-sm leading-relaxed">{data.innovation.point3}</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: '#C89A3D' }} />
-                  <span className="text-sm">{data.innovation.point4}</span>
+                <li className="flex items-start gap-3 group/item">
+                  <CheckCircle2 className="h-5 w-5 mt-0.5 flex-shrink-0 text-daat-gold group-hover/item:scale-110 transition-transform" />
+                  <span className="text-sm leading-relaxed">{data.innovation.point4}</span>
                 </li>
               </ul>
             </CardContent>
           </Card>
 
           {/* Value We Add */}
-          <Card className="hover:shadow-soft-lg transition-shadow border-2" style={{ borderColor: 'rgba(44, 74, 110, 0.2)' }}>
+          <Card variant="premium" className="group">
             <CardHeader>
-              <div className="mb-4 h-12 w-12 rounded-2xl flex items-center justify-center" style={{
-                background: 'linear-gradient(135deg, rgba(44, 74, 110, 0.15) 0%, rgba(11, 31, 59, 0.1) 100%)'
-              }}>
-                <TrendingUp className="h-6 w-6" style={{ color: '#2C4A6E' }} />
+              <div className="mb-6 relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-daat-steel/20 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity"/>
+                <div className="relative h-14 w-14 rounded-2xl bg-gradient-to-br from-daat-steel/10 to-daat-navy/5 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <TrendingUp className="h-7 w-7 text-daat-steel" />
+                </div>
               </div>
-              <CardTitle className="text-2xl text-daat-dark">{data.value.title}</CardTitle>
+              <CardTitle className="text-2xl font-bold mb-3">{data.value.title}</CardTitle>
+              <p className="text-foreground/70 leading-relaxed">{data.value.desc}</p>
             </CardHeader>
             <CardContent>
-              <p className="mb-4 text-muted-foreground">{data.value.desc}</p>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: '#2C4A6E' }} />
-                  <span className="text-sm">{data.value.point1}</span>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3 group/item">
+                  <CheckCircle2 className="h-5 w-5 mt-0.5 flex-shrink-0 text-daat-steel group-hover/item:scale-110 transition-transform" />
+                  <span className="text-sm leading-relaxed">{data.value.point1}</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: '#2C4A6E' }} />
-                  <span className="text-sm">{data.value.point2}</span>
+                <li className="flex items-start gap-3 group/item">
+                  <CheckCircle2 className="h-5 w-5 mt-0.5 flex-shrink-0 text-daat-steel group-hover/item:scale-110 transition-transform" />
+                  <span className="text-sm leading-relaxed">{data.value.point2}</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: '#2C4A6E' }} />
-                  <span className="text-sm">{data.value.point3}</span>
+                <li className="flex items-start gap-3 group/item">
+                  <CheckCircle2 className="h-5 w-5 mt-0.5 flex-shrink-0 text-daat-steel group-hover/item:scale-110 transition-transform" />
+                  <span className="text-sm leading-relaxed">{data.value.point3}</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: '#2C4A6E' }} />
-                  <span className="text-sm">{data.value.point4}</span>
+                <li className="flex items-start gap-3 group/item">
+                  <CheckCircle2 className="h-5 w-5 mt-0.5 flex-shrink-0 text-daat-steel group-hover/item:scale-110 transition-transform" />
+                  <span className="text-sm leading-relaxed">{data.value.point4}</span>
                 </li>
               </ul>
             </CardContent>
           </Card>
         </div>
 
-        {/* Real Results */}
-        <div className="mt-12">
-          <Card className="border-2" style={{
-            background: 'linear-gradient(135deg, rgba(242, 184, 75, 0.08) 0%, rgba(200, 154, 61, 0.1) 45%, rgba(44, 74, 110, 0.05) 75%, rgba(10, 22, 40, 0.03) 100%)',
-            borderColor: 'rgba(200, 154, 61, 0.3)'
-          }}>
-            <CardHeader>
-              <div className="mb-4 h-12 w-12 rounded-2xl flex items-center justify-center mx-auto" style={{
-                background: 'linear-gradient(135deg, rgba(242, 184, 75, 0.2) 0%, rgba(200, 154, 61, 0.15) 100%)'
-              }}>
-                <Target className="h-6 w-6" style={{ color: '#C89A3D' }} />
+        {/* Real Results - Premium Highlight Card */}
+        <div className="mt-16">
+          <Card variant="premium" className="relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-daat-gold/5 via-transparent to-daat-steel/5"/>
+            <CardHeader className="text-center relative z-10">
+              <div className="mb-6 relative inline-block mx-auto">
+                <div className="absolute inset-0 bg-daat-gold/20 rounded-2xl blur-xl"/>
+                <div className="relative h-16 w-16 rounded-2xl bg-gradient-to-br from-daat-gold/20 to-daat-goldLight/10 backdrop-blur-sm flex items-center justify-center">
+                  <Target className="h-8 w-8 text-daat-gold" />
+                </div>
               </div>
-              <CardTitle className="text-2xl text-daat-dark text-center">{data.results.title}</CardTitle>
-              <CardDescription className="text-base mt-2 text-center">{data.results.desc}</CardDescription>
+              <CardTitle className="text-3xl font-bold mb-4">{data.results.title}</CardTitle>
+              <CardDescription className="text-lg max-w-2xl mx-auto">{data.results.desc}</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="grid gap-4 md:grid-cols-2">
-                <div className="flex items-start gap-3 p-4 rounded-xl bg-background/70">
-                  <CheckCircle2 className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: '#C89A3D' }} />
-                  <span className="text-sm font-medium">{data.results.example1}</span>
+                <div className="flex items-start gap-3 p-5 rounded-2xl bg-background/80 backdrop-blur-sm border border-daat-gold/10 hover:border-daat-gold/30 hover:shadow-glow-gold transition-all group">
+                  <CheckCircle2 className="h-5 w-5 mt-0.5 flex-shrink-0 text-daat-gold group-hover:scale-110 transition-transform" />
+                  <span className="text-sm font-medium leading-relaxed">{data.results.example1}</span>
                 </div>
-                <div className="flex items-start gap-3 p-4 rounded-xl bg-background/70">
-                  <CheckCircle2 className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: '#C89A3D' }} />
-                  <span className="text-sm font-medium">{data.results.example2}</span>
+                <div className="flex items-start gap-3 p-5 rounded-2xl bg-background/80 backdrop-blur-sm border border-daat-gold/10 hover:border-daat-gold/30 hover:shadow-glow-gold transition-all group">
+                  <CheckCircle2 className="h-5 w-5 mt-0.5 flex-shrink-0 text-daat-gold group-hover:scale-110 transition-transform" />
+                  <span className="text-sm font-medium leading-relaxed">{data.results.example2}</span>
                 </div>
-                <div className="flex items-start gap-3 p-4 rounded-xl bg-background/70">
-                  <CheckCircle2 className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: '#C89A3D' }} />
-                  <span className="text-sm font-medium">{data.results.example3}</span>
+                <div className="flex items-start gap-3 p-5 rounded-2xl bg-background/80 backdrop-blur-sm border border-daat-gold/10 hover:border-daat-gold/30 hover:shadow-glow-gold transition-all group">
+                  <CheckCircle2 className="h-5 w-5 mt-0.5 flex-shrink-0 text-daat-gold group-hover:scale-110 transition-transform" />
+                  <span className="text-sm font-medium leading-relaxed">{data.results.example3}</span>
                 </div>
-                <div className="flex items-start gap-3 p-4 rounded-xl bg-background/70">
-                  <CheckCircle2 className="h-5 w-5 mt-0.5 flex-shrink-0" style={{ color: '#C89A3D' }} />
-                  <span className="text-sm font-medium">{data.results.example4}</span>
+                <div className="flex items-start gap-3 p-5 rounded-2xl bg-background/80 backdrop-blur-sm border border-daat-gold/10 hover:border-daat-gold/30 hover:shadow-glow-gold transition-all group">
+                  <CheckCircle2 className="h-5 w-5 mt-0.5 flex-shrink-0 text-daat-gold group-hover:scale-110 transition-transform" />
+                  <span className="text-sm font-medium leading-relaxed">{data.results.example4}</span>
                 </div>
               </div>
             </CardContent>

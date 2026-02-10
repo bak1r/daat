@@ -3,10 +3,12 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Menu, X, Globe } from "lucide-react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
+import { ThemeToggle } from "@/components/ui/theme-toggle"
 import { DAATLogo } from "@/components/ui/DAATLogo"
 import { getTranslations, type Locale } from "@/lib/i18n"
+import { cn } from "@/lib/utils"
 
 interface HeaderProps {
   locale: Locale
@@ -15,8 +17,18 @@ interface HeaderProps {
 
 export function Header({ locale, onLocaleChange }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const pathname = usePathname()
   const t = getTranslations(locale)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20)
+    }
+    
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const getNextLocale = (current: Locale): Locale => {
     if (current === "al") return "en"
@@ -51,8 +63,13 @@ export function Header({ locale, onLocaleChange }: HeaderProps) {
   ]
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 overflow-x-hidden">
-      <div className="container flex h-20 md:h-28 items-center justify-between px-4 max-w-full">
+    <header className={cn(
+      "sticky top-0 z-50 w-full border-b overflow-x-hidden transition-all duration-300",
+      scrolled 
+        ? "bg-background/80 backdrop-blur-xl shadow-premium h-16" 
+        : "bg-background/60 backdrop-blur-md shadow-soft h-20"
+    )}>
+      <div className="container flex items-center justify-between px-4 max-w-full h-full">
         <Link href={`/${locale}`} className="flex items-center flex-shrink-0 py-2">
           <DAATLogo size="lg" showTagline={false} />
         </Link>
@@ -62,22 +79,15 @@ export function Header({ locale, onLocaleChange }: HeaderProps) {
             <Link
               key={item.href}
               href={item.href}
-              className={`text-sm font-medium transition-colors ${
-                pathname === item.href ? "text-daat-gold" : "text-daat-dark/60"
-              }`}
-              style={{
-                color: pathname === item.href ? '#C89A3D' : undefined
-              }}
-              onMouseEnter={(e) => {
-                if (pathname !== item.href) {
-                  e.currentTarget.style.color = '#C89A3D'
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (pathname !== item.href) {
-                  e.currentTarget.style.color = ''
-                }
-              }}
+              className={cn(
+                "relative text-sm font-medium transition-colors duration-200",
+                "hover:text-daat-gold",
+                "after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-daat-gold after:transition-all after:duration-200",
+                "hover:after:w-full",
+                pathname === item.href 
+                  ? "text-daat-gold after:w-full" 
+                  : "text-foreground/70"
+              )}
             >
               {item.label}
             </Link>
@@ -89,7 +99,7 @@ export function Header({ locale, onLocaleChange }: HeaderProps) {
             href="https://wa.me/355693788480"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm font-medium text-white bg-[#25D366] hover:bg-[#20BA5A] transition-all duration-300 px-3 py-2 rounded-lg shadow-sm hover:shadow-md hover:scale-105 active:scale-95"
+            className="flex items-center gap-2 text-sm font-medium text-white bg-[#25D366] hover:bg-[#20BA5A] transition-all duration-300 px-3 py-2 rounded-lg shadow-sm hover:shadow-md hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2"
           >
             <svg
               width="20"
@@ -102,6 +112,8 @@ export function Header({ locale, onLocaleChange }: HeaderProps) {
             </svg>
             <span className="hidden sm:inline">WhatsApp</span>
           </a>
+          <ThemeToggle />
+          
           <Button
             variant="ghost"
             size="sm"
@@ -132,29 +144,20 @@ export function Header({ locale, onLocaleChange }: HeaderProps) {
       </div>
 
       {mobileMenuOpen && (
-        <div className="md:hidden border-t">
-          <nav className="container flex flex-col space-y-2 px-4 py-4">
+        <div className="md:hidden border-t bg-background/95 backdrop-blur-xl animate-fade-in">
+          <nav className="container flex flex-col space-y-1 px-4 py-4">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`py-2 text-sm font-medium transition-colors ${
-                  pathname === item.href ? "text-daat-gold" : "text-daat-dark/60"
-                }`}
-                style={{
-                  color: pathname === item.href ? '#C89A3D' : undefined
-                }}
-                onMouseEnter={(e) => {
-                  if (pathname !== item.href) {
-                    e.currentTarget.style.color = '#C89A3D'
-                  }
-                }}
-                onMouseLeave={(e) => {
-                  if (pathname !== item.href) {
-                    e.currentTarget.style.color = ''
-                  }
-                }}
+                className={cn(
+                  "py-3 px-4 text-sm font-medium transition-all duration-200 rounded-lg",
+                  "hover:bg-accent hover:text-daat-gold",
+                  pathname === item.href 
+                    ? "text-daat-gold bg-accent/50" 
+                    : "text-foreground/70"
+                )}
               >
                 {item.label}
               </Link>

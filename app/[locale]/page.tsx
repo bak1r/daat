@@ -54,11 +54,11 @@ export default function HomePage({ params }: { params: { locale: Locale } }) {
       <FAQSchema locale={locale} />
       <Hero locale={locale} />
       <WhyAlbania locale={locale} />
-      <LogoStrip locale={locale} />
       <ServicesGrid locale={locale} />
       <HowWeWork locale={locale} />
       <CaseStudyHighlights locale={locale} />
       <Testimonials locale={locale} />
+      <LogoStrip locale={locale} />
       <FAQ locale={locale} />
       <FinalCTA locale={locale} />
     </>

@@ -37,19 +37,62 @@ const team = [
   },
 ]
 
-// NOT: Tamamen hayali/generic müşteri listesi - Gerçek şirket isimleri kullanılmamıştır
-const clients = [
-  "ApexTech Solutions",
-  "Nexus Digital Works",
-  "Vertex Data Systems",
-  "Quantum Innovations",
-  "Catalyst Software Labs",
-  "Pulse Tech",
-  "Synergy Automation",
-  "CodeForge Works",
-  "Digital Nexus Solutions",
-  "TechSphere Partners",
-]
+const partners = [
+  {
+    name: "DataAI",
+    logo: "/images/partners/dataai.png",
+    description: {
+      tr: "Veri ve yapay zeka odaklı ürünler ve analiz çözümleri.",
+      en: "Data & AI-focused products and analytics solutions.",
+      al: "Produkte dhe zgjidhje analitike të fokusuara në të dhëna dhe AI.",
+    },
+  },
+  {
+    name: "OTA Legal",
+    logo: "/images/partners/ota-legal.png",
+    description: {
+      tr: "Hukuk ve danışmanlık alanında hizmetler.",
+      en: "Legal services and consulting.",
+      al: "Shërbime ligjore dhe konsulencë.",
+    },
+  },
+  {
+    name: "r10.net",
+    logo: "/images/partners/r10-net.webp",
+    description: {
+      tr: "Webmaster, SEO ve freelancer ekosistemi için topluluk platformu.",
+      en: "A community platform for webmasters, SEO, and freelancers.",
+      al: "Platform komuniteti për webmaster, SEO dhe freelancer.",
+    },
+  },
+  {
+    name: "Thinfit",
+    logo: "/images/partners/thinfit.png",
+    description: {
+      tr: "Sağlık ve fitness odağında marka / ürünler.",
+      en: "A health & fitness-focused brand / products.",
+      al: "Markë / produkte të fokusuara te shëndeti dhe fitnesi.",
+    },
+  },
+  {
+    name: "Turcsell",
+    logo: "/images/partners/turcsell.png",
+    description: {
+      tr: "Telekomünikasyon ve dijital servisler odağında çözümler.",
+      en: "Telecommunications and digital services-focused solutions.",
+      al: "Zgjidhje të fokusuara në telekomunikacion dhe shërbime dixhitale.",
+    },
+  },
+  {
+    name: "WM Aracı",
+    logo: "/images/partners/wmaraci.jpg",
+    description: {
+      tr: "Web araçları ve otomasyon kullanım senaryoları.",
+      en: "Web tools and automation use-cases.",
+      al: "Mjete web dhe skenarë përdorimi automatizimi.",
+    },
+  },
+] as const
 
 export default function AboutPage({ params }: { params: { locale: Locale } }) {
   const t = getTranslations(params.locale)
@@ -319,11 +362,25 @@ export default function AboutPage({ params }: { params: { locale: Locale } }) {
             <h2 className="text-3xl font-bold mb-8 text-center">
               {about.clients.title}
             </h2>
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-              {clients.map((client, index) => (
-                <Card key={index} className="hover:shadow-soft-lg transition-shadow">
-                  <CardContent className="pt-6">
-                    <p className="text-sm font-medium text-center">{client}</p>
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {partners.map((p) => (
+                <Card key={p.name} className="hover:shadow-soft-lg transition-shadow">
+                  <CardHeader className="pb-3">
+                    <div className="h-12 w-full flex items-center justify-center">
+                      <Image
+                        src={p.logo}
+                        alt={p.name}
+                        width={220}
+                        height={60}
+                        className="h-10 w-auto object-contain"
+                      />
+                    </div>
+                  </CardHeader>
+                  <CardContent className="pt-0">
+                    <p className="text-sm font-semibold text-center mb-1">{p.name}</p>
+                    <p className="text-xs text-muted-foreground text-center leading-relaxed">
+                      {p.description[params.locale] ?? p.description.en}
+                    </p>
                   </CardContent>
                 </Card>
               ))}

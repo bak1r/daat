@@ -74,47 +74,58 @@ export function Testimonials({ locale }: TestimonialsProps) {
   const localeTestimonials = testimonials[locale]
 
   return (
-    <section className="relative py-20 overflow-x-hidden" style={{
-      background: 'linear-gradient(135deg, rgba(247, 249, 252, 1) 0%, rgba(242, 184, 75, 0.03) 50%, rgba(247, 249, 252, 1) 100%)'
-    }}>
-      {/* Decorative elements */}
+    <section className="relative section-spacing overflow-x-hidden bg-gradient-to-b from-background via-daat-steel/3 to-background">
+      {/* Premium decorative blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/2 left-0 w-80 h-80 rounded-full blur-3xl -translate-y-1/2" style={{
-          background: 'linear-gradient(135deg, rgba(242, 184, 75, 0.12) 0%, rgba(200, 154, 61, 0.08) 100%)'
-        }}></div>
-        <div className="absolute top-1/2 right-0 w-80 h-80 rounded-full blur-3xl -translate-y-1/2" style={{
-          background: 'linear-gradient(135deg, rgba(44, 74, 110, 0.12) 0%, rgba(11, 31, 59, 0.08) 100%)'
-        }}></div>
+        <div 
+          className="absolute top-1/2 left-0 w-[500px] h-[500px] rounded-full blur-3xl opacity-20 animate-blob -translate-y-1/2"
+          style={{
+            background: 'radial-gradient(circle, rgba(242,184,75,0.4) 0%, transparent 70%)'
+          }}
+        />
+        <div 
+          className="absolute top-1/2 right-0 w-[500px] h-[500px] rounded-full blur-3xl opacity-15 animate-blob-delayed -translate-y-1/2"
+          style={{
+            background: 'radial-gradient(circle, rgba(44,74,110,0.4) 0%, transparent 70%)'
+          }}
+        />
       </div>
       <div className="container px-4 sm:px-6 lg:px-8 max-w-full relative z-10">
-        <div className="mx-auto max-w-2xl text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl" style={{
-            background: 'linear-gradient(135deg, #0B1F3B 0%, #C89A3D 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text'
-          }}>
+        <div className="mx-auto max-w-3xl text-center mb-16">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-6 gradient-text-gold">
             {t.testimonials.title}
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="text-lg sm:text-xl text-foreground/70">
             {t.testimonials.subtitle}
           </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-3">
           {localeTestimonials.map((testimonial, index) => (
-            <Card key={index} className="hover:shadow-soft-lg transition-shadow">
-              <CardContent className="pt-6">
-                <div className="flex mb-4">
+            <Card key={index} variant="premium" className="relative group">
+              {/* Decorative quote mark */}
+              <div className="absolute -top-4 -left-4 text-8xl text-daat-gold/20 font-serif leading-none select-none pointer-events-none">"</div>
+              
+              <CardContent className="pt-10 relative">
+                {/* Premium star rating with glow */}
+                <div className="flex gap-1 mb-6">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
-                    <Star key={i} className="h-4 w-4" style={{ fill: '#C89A3D', color: '#C89A3D' }} />
+                    <Star 
+                      key={i} 
+                      className="h-5 w-5 fill-daat-gold text-daat-gold drop-shadow-[0_0_8px_rgba(200,154,61,0.6)] group-hover:scale-110 transition-transform" 
+                      style={{ transitionDelay: `${i * 50}ms` }}
+                    />
                   ))}
                 </div>
-                <p className="mb-4 text-muted-foreground">
+                
+                {/* Quote content */}
+                <p className="mb-6 text-foreground/80 leading-relaxed italic">
                   "{testimonial.content}"
                 </p>
-                <div>
-                  <p className="font-semibold">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                
+                {/* Author info with separator */}
+                <div className="pt-4 border-t border-daat-gold/20">
+                  <p className="font-bold text-lg mb-1">{testimonial.name}</p>
+                  <p className="text-sm text-foreground/60">{testimonial.role}</p>
                 </div>
               </CardContent>
             </Card>

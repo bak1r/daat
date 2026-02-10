@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from "react"
 import { usePathname, useRouter } from "next/navigation"
+import { ThemeProvider } from "next-themes"
 import { Header } from "@/components/layout/Header"
 import { Footer } from "@/components/layout/Footer"
+import { ChatWidget } from "@/components/chat/ChatWidget"
 import { type Locale, defaultLocale } from "@/lib/i18n"
 
 export default function LocaleLayout({
@@ -28,10 +30,20 @@ export default function LocaleLayout({
   }
 
   return (
-    <div className="flex min-h-screen flex-col overflow-x-hidden max-w-full">
-      <Header locale={locale} onLocaleChange={handleLocaleChange} />
-      <main className="flex-1 overflow-x-hidden max-w-full">{children}</main>
-      <Footer locale={locale} />
-    </div>
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="light"
+      enableSystem={false}
+      disableTransitionOnChange={false}
+    >
+      <div className="flex min-h-screen flex-col overflow-x-hidden max-w-full">
+        <Header locale={locale} onLocaleChange={handleLocaleChange} />
+        <main className="flex-1 overflow-x-hidden max-w-full">{children}</main>
+        <Footer locale={locale} />
+        
+        {/* AI Chat Assistant */}
+        <ChatWidget locale={locale} />
+      </div>
+    </ThemeProvider>
   )
 }

@@ -10,27 +10,23 @@ export function Footer({ locale }: FooterProps) {
   const t = getTranslations(locale)
 
   return (
-    <footer className="border-t overflow-x-hidden" style={{
-      background: 'linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(10, 22, 40, 0.02) 100%)',
-      borderColor: 'rgba(44, 74, 110, 0.1)'
-    }}>
-      <div className="container px-4 py-12 max-w-full">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
-          <div className="space-y-4">
+    <footer className="border-t border-border overflow-x-hidden bg-gradient-to-br from-daat-navy/5 via-background to-daat-steel/5 dark:from-daat-navy/20 dark:via-background dark:to-daat-steel/10">
+      <div className="container px-4 sm:px-6 lg:px-8 py-16 md:py-20 max-w-full">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
+          <div className="space-y-6">
             <DAATLogo size="md" showTagline={false} />
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-foreground/70 leading-relaxed max-w-xs">
               {t.footer.description}
             </p>
           </div>
 
-          <div className="space-y-4">
-            <h4 className="text-sm font-semibold text-daat-dark">Links</h4>
-            <ul className="space-y-2 text-sm">
+          <div className="space-y-5">
+            <h4 className="text-sm font-bold tracking-wide uppercase text-foreground">Links</h4>
+            <ul className="space-y-3 text-sm">
               <li>
                 <Link
                   href={`/${locale}/services`}
-                  className="text-muted-foreground transition-colors hover:text-daat-gold"
-                  style={{ '--hover-color': '#C89A3D' } as React.CSSProperties}
+                  className="text-foreground/60 hover:text-daat-gold transition-all hover:translate-x-1 inline-block"
                 >
                   {t.footer.links.services}
                 </Link>
@@ -38,7 +34,7 @@ export function Footer({ locale }: FooterProps) {
               <li>
                 <Link
                   href={`/${locale}/case-studies`}
-                  className="text-muted-foreground transition-colors hover:text-daat-gold"
+                  className="text-foreground/60 hover:text-daat-gold transition-all hover:translate-x-1 inline-block"
                 >
                   {t.footer.links.caseStudies}
                 </Link>
@@ -46,7 +42,7 @@ export function Footer({ locale }: FooterProps) {
               <li>
                 <Link
                   href={`/${locale}/insights`}
-                  className="text-muted-foreground transition-colors hover:text-daat-gold"
+                  className="text-foreground/60 hover:text-daat-gold transition-all hover:translate-x-1 inline-block"
                 >
                   {t.footer.links.insights}
                 </Link>
@@ -54,7 +50,7 @@ export function Footer({ locale }: FooterProps) {
               <li>
                 <Link
                   href={`/${locale}/about`}
-                  className="text-muted-foreground transition-colors hover:text-daat-gold"
+                  className="text-foreground/60 hover:text-daat-gold transition-all hover:translate-x-1 inline-block"
                 >
                   {t.footer.links.about}
                 </Link>
@@ -62,7 +58,7 @@ export function Footer({ locale }: FooterProps) {
               <li>
                 <Link
                   href={`/${locale}/contact`}
-                  className="text-muted-foreground transition-colors hover:text-daat-gold"
+                  className="text-foreground/60 hover:text-daat-gold transition-all hover:translate-x-1 inline-block"
                 >
                   {t.footer.links.contact}
                 </Link>
@@ -70,15 +66,15 @@ export function Footer({ locale }: FooterProps) {
             </ul>
           </div>
 
-          <div className="space-y-4">
-            <h4 className="text-sm font-semibold text-daat-dark">
+          <div className="space-y-5">
+            <h4 className="text-sm font-bold tracking-wide uppercase text-foreground">
               {locale === "tr" ? "Yasal" : locale === "al" ? "Ligjore" : "Legal"}
             </h4>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-3 text-sm">
               <li>
                 <Link
                   href={`/${locale}/privacy`}
-                  className="text-muted-foreground transition-colors hover:text-daat-gold"
+                  className="text-foreground/60 hover:text-daat-gold transition-all hover:translate-x-1 inline-block"
                 >
                   {t.footer.legal.privacy}
                 </Link>
@@ -86,7 +82,7 @@ export function Footer({ locale }: FooterProps) {
               <li>
                 <Link
                   href={`/${locale}/terms`}
-                  className="text-muted-foreground transition-colors hover:text-daat-gold"
+                  className="text-foreground/60 hover:text-daat-gold transition-all hover:translate-x-1 inline-block"
                 >
                   {t.footer.legal.terms}
                 </Link>
@@ -94,7 +90,7 @@ export function Footer({ locale }: FooterProps) {
               <li>
                 <Link
                   href={`/${locale}/cookies`}
-                  className="text-muted-foreground transition-colors hover:text-daat-gold"
+                  className="text-foreground/60 hover:text-daat-gold transition-all hover:translate-x-1 inline-block"
                 >
                   {t.footer.legal.cookies}
                 </Link>
@@ -102,7 +98,7 @@ export function Footer({ locale }: FooterProps) {
               <li>
                 <Link
                   href={`/${locale}/gdpr`}
-                  className="text-muted-foreground transition-colors hover:text-daat-gold"
+                  className="text-foreground/60 hover:text-daat-gold transition-all hover:translate-x-1 inline-block"
                 >
                   {t.footer.legal.gdpr}
                 </Link>
@@ -110,23 +106,23 @@ export function Footer({ locale }: FooterProps) {
             </ul>
           </div>
 
-          <div className="space-y-4">
-            <h4 className="text-sm font-semibold">Contact</h4>
-            <div className="space-y-2 text-sm text-muted-foreground">
-              <p>Rruga Artan Lenja 81HX+F94 Tiran, Arnavutluk</p>
-              <p>info@daat.com</p>
-              <p>+355693788480</p>
+          <div className="space-y-5">
+            <h4 className="text-sm font-bold tracking-wide uppercase text-foreground">Contact</h4>
+            <div className="space-y-3 text-sm text-foreground/60 leading-relaxed">
+              <p>Rruga Artan Lenja<br />81HX+F94 Tiran<br />Arnavutluk</p>
+              <p className="hover:text-daat-gold transition-colors cursor-pointer">info@daat.com</p>
+              <p className="hover:text-daat-gold transition-colors cursor-pointer">+355693788480</p>
             </div>
           </div>
         </div>
 
-        <div className="mt-8 border-t pt-8">
-          <div className="text-center text-sm text-muted-foreground mb-3">
-            <p>© {new Date().getFullYear()} DAAT. {t.footer.rights}</p>
+        <div className="mt-12 pt-8 border-t border-daat-gold/20">
+          <div className="text-center text-sm text-foreground/60 mb-4">
+            <p className="font-medium">© {new Date().getFullYear()} DAAT. {t.footer.rights}</p>
           </div>
-          <div className="text-center text-xs text-muted-foreground/80 max-w-3xl mx-auto">
-            <p className="mb-2">{t.footer.compliance}</p>
-            <p>
+          <div className="text-center text-xs text-foreground/50 max-w-3xl mx-auto space-y-2">
+            <p>{t.footer.compliance}</p>
+            <p className="leading-relaxed">
               {locale === "tr" 
                 ? "Kişisel verileriniz Arnavutluk Veri Koruma Yasası (Ligji Nr. 9887) ve GDPR uyarınca korunmaktadır."
                 : locale === "al"

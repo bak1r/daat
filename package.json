@@ -6,9 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-kb": "ts-node scripts/generate-knowledge-base.ts",
+    "prebuild": "npm run generate-kb"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.74.0",
     "@hookform/resolvers": "^3.9.0",
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
@@ -19,6 +22,8 @@
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.427.0",
     "next": "^14.2.5",
+    "next-themes": "^0.4.6",
+    "openai": "^6.19.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.52.1",
@@ -28,10 +33,11 @@
     "remark-gfm": "^4.0.0",
     "resend": "^6.8.0",
     "tailwind-merge": "^2.5.2",
+    "ts-node": "^10.9.2",
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@types/node": "^20.14.12",
+    "@types/node": "^20.19.33",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.19",

@@ -52,49 +52,57 @@ export function CaseStudyHighlights({ locale }: CaseStudyHighlightsProps) {
   const t = getTranslations(locale)
 
   return (
-    <section className="relative py-20 overflow-x-hidden" style={{
-      background: 'linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(242, 184, 75, 0.03) 50%, rgba(255, 255, 255, 1) 100%)'
-    }}>
-      {/* Decorative elements */}
+    <section className="relative section-spacing overflow-x-hidden bg-background">
+      {/* Premium decorative blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/3 left-0 w-80 h-80 rounded-full blur-3xl" style={{
-          background: 'linear-gradient(135deg, rgba(44, 74, 110, 0.08) 0%, rgba(11, 31, 59, 0.05) 100%)'
-        }}></div>
-        <div className="absolute bottom-1/3 right-0 w-80 h-80 rounded-full blur-3xl" style={{
-          background: 'linear-gradient(135deg, rgba(242, 184, 75, 0.08) 0%, rgba(200, 154, 61, 0.05) 100%)'
-        }}></div>
+        <div 
+          className="absolute top-1/3 left-0 w-[500px] h-[500px] rounded-full blur-3xl opacity-15 animate-blob"
+          style={{
+            background: 'radial-gradient(circle, rgba(44,74,110,0.3) 0%, transparent 70%)'
+          }}
+        />
+        <div 
+          className="absolute bottom-1/3 right-0 w-[500px] h-[500px] rounded-full blur-3xl opacity-20 animate-blob-delayed"
+          style={{
+            background: 'radial-gradient(circle, rgba(242,184,75,0.3) 0%, transparent 70%)'
+          }}
+        />
       </div>
       <div className="container px-4 sm:px-6 lg:px-8 max-w-full relative z-10">
-        <div className="mx-auto max-w-2xl text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl" style={{
-            background: 'linear-gradient(135deg, #0B1F3B 0%, #C89A3D 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text'
-          }}>
+        <div className="mx-auto max-w-3xl text-center mb-16">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-6 gradient-text-gold">
             {t.nav.caseStudies}
           </h2>
         </div>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {caseStudies.map((study) => (
-            <Card key={study.slug} className="overflow-hidden hover:shadow-soft-lg transition-shadow">
-              <div className="relative h-48 w-full">
+            <Card key={study.slug} variant="glass" className="overflow-hidden group cursor-pointer">
+              {/* Image with hover overlay */}
+              <div className="relative h-56 w-full overflow-hidden">
                 <Image
                   src={study.image}
                   alt={study.title}
                   fill
-                  className="object-cover"
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
+                {/* Premium overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-daat-dark/90 via-daat-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <Button variant="premium" size="lg" className="translate-y-4 group-hover:translate-y-0 transition-transform">
+                    View Case Study
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </div>
               </div>
+              
               <CardHeader>
-                <CardTitle>{study.title}</CardTitle>
-                <CardDescription>{study.description}</CardDescription>
+                <CardTitle className="group-hover:text-daat-gold transition-colors">{study.title}</CardTitle>
+                <CardDescription className="leading-relaxed">{study.description}</CardDescription>
               </CardHeader>
               <CardContent>
-                <Link href={`/${locale}/case-studies/${study.slug}`}>
-                  <Button variant="outline">
+                <Link href={`/${locale}/case-studies/${study.slug}`} className="block">
+                  <Button variant="ghost" size="sm" className="w-full justify-between group/btn">
                     Read More
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
               </CardContent>

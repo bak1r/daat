@@ -37,50 +37,56 @@ export function ServicesGrid({ locale }: ServicesGridProps) {
   const t = getTranslations(locale)
 
   return (
-    <section className="relative py-20 overflow-x-hidden" style={{
-      background: 'linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(242, 184, 75, 0.03) 50%, rgba(255, 255, 255, 1) 100%)'
-    }}>
-      {/* Decorative elements */}
+    <section className="relative section-spacing overflow-x-hidden bg-background">
+      {/* Premium decorative blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 right-0 w-96 h-96 rounded-full blur-3xl" style={{
-          background: 'linear-gradient(135deg, rgba(242, 184, 75, 0.08) 0%, rgba(200, 154, 61, 0.05) 100%)'
-        }}></div>
-        <div className="absolute bottom-1/4 left-0 w-96 h-96 rounded-full blur-3xl" style={{
-          background: 'linear-gradient(135deg, rgba(44, 74, 110, 0.08) 0%, rgba(11, 31, 59, 0.05) 100%)'
-        }}></div>
+        <div 
+          className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full blur-3xl opacity-20 animate-blob"
+          style={{
+            background: 'radial-gradient(circle, rgba(242,184,75,0.3) 0%, transparent 70%)'
+          }}
+        />
+        <div 
+          className="absolute bottom-1/4 left-0 w-[500px] h-[500px] rounded-full blur-3xl opacity-15 animate-blob-delayed"
+          style={{
+            background: 'radial-gradient(circle, rgba(44,74,110,0.3) 0%, transparent 70%)'
+          }}
+        />
       </div>
       <div className="container px-4 sm:px-6 lg:px-8 max-w-full relative z-10">
-        <div className="mx-auto max-w-2xl text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl" style={{
-            background: 'linear-gradient(135deg, #0B1F3B 0%, #C89A3D 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text'
-          }}>
+        <div className="mx-auto max-w-3xl text-center mb-16">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-6 gradient-text-gold">
             {t.services.title}
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="text-lg sm:text-xl text-foreground/70">
             {t.services.subtitle}
           </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => {
             const Icon = service.icon
             const serviceData = t.services[service.key as keyof typeof t.services] as { title: string; description: string }
             return (
-              <Card key={service.key} className="hover:shadow-soft-lg transition-shadow border border-daat-steel/10">
-                <CardHeader>
-                  <div className="mb-4 h-12 w-12 rounded-2xl flex items-center justify-center" style={{
-                    background: 'linear-gradient(135deg, rgba(242, 184, 75, 0.15) 0%, rgba(200, 154, 61, 0.1) 100%)'
-                  }}>
-                    <Icon className="h-6 w-6" style={{ color: '#C89A3D' }} />
-                  </div>
-                  <CardTitle className="text-daat-dark">{serviceData.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>{serviceData.description}</CardDescription>
-                </CardContent>
-              </Card>
+              <div key={service.key} className="relative group">
+                {/* Hover glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-daat-gold/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl blur-xl"/>
+                
+                <Card variant="premium" className="relative h-full">
+                  <CardHeader>
+                    {/* Premium icon with glassmorphism ring */}
+                    <div className="mb-6 relative">
+                      <div className="absolute inset-0 bg-daat-gold/10 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity"/>
+                      <div className="relative h-16 w-16 rounded-2xl bg-gradient-to-br from-daat-gold/10 to-daat-goldLight/5 backdrop-blur-sm border border-daat-gold/20 flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                        <Icon className="h-7 w-7 text-daat-gold group-hover:scale-110 transition-transform" />
+                      </div>
+                    </div>
+                    <CardTitle className="text-xl font-bold mb-3">{serviceData.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="leading-relaxed">{serviceData.description}</CardDescription>
+                  </CardContent>
+                </Card>
+              </div>
             )
           })}
         </div>

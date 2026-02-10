@@ -29,55 +29,76 @@ export function HowWeWork({ locale }: HowWeWorkProps) {
   const t = getTranslations(locale)
 
   return (
-    <section className="relative py-20 overflow-x-hidden" style={{
-      background: 'linear-gradient(135deg, rgba(247, 249, 252, 1) 0%, rgba(242, 184, 75, 0.05) 50%, rgba(247, 249, 252, 1) 100%)'
-    }}>
-      {/* Decorative elements */}
+    <section className="relative section-spacing overflow-x-hidden bg-gradient-to-b from-background via-daat-gold/2 to-background">
+      {/* Premium decorative blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/3 w-72 h-72 rounded-full blur-3xl" style={{
-          background: 'linear-gradient(135deg, rgba(242, 184, 75, 0.12) 0%, rgba(200, 154, 61, 0.08) 100%)'
-        }}></div>
-        <div className="absolute bottom-0 right-1/3 w-72 h-72 rounded-full blur-3xl" style={{
-          background: 'linear-gradient(135deg, rgba(44, 74, 110, 0.12) 0%, rgba(11, 31, 59, 0.08) 100%)'
-        }}></div>
+        <div 
+          className="absolute top-0 left-1/3 w-[400px] h-[400px] rounded-full blur-3xl opacity-20 animate-blob"
+          style={{
+            background: 'radial-gradient(circle, rgba(242,184,75,0.4) 0%, transparent 70%)'
+          }}
+        />
+        <div 
+          className="absolute bottom-0 right-1/3 w-[400px] h-[400px] rounded-full blur-3xl opacity-15 animate-blob-delayed"
+          style={{
+            background: 'radial-gradient(circle, rgba(44,74,110,0.4) 0%, transparent 70%)'
+          }}
+        />
       </div>
       <div className="container px-4 sm:px-6 lg:px-8 max-w-full relative z-10">
-        <div className="mx-auto max-w-2xl text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl" style={{
-            background: 'linear-gradient(135deg, #0B1F3B 0%, #C89A3D 50%, #0B1F3B 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text'
-          }}>
+        <div className="mx-auto max-w-3xl text-center mb-16">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-6 gradient-text-gold">
             {t.howWeWork.title}
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="text-lg sm:text-xl text-foreground/70">
             {t.howWeWork.subtitle}
           </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {steps.map((step, index) => {
-            const Icon = step.icon
-            const stepData = t.howWeWork[step.key as keyof typeof t.howWeWork] as { title: string; description: string }
-            return (
-              <Card key={step.key} className="relative border border-daat-steel/10">
-                <CardHeader>
-                  <div className="mb-4 h-12 w-12 rounded-2xl flex items-center justify-center" style={{
-                    background: 'linear-gradient(135deg, rgba(242, 184, 75, 0.15) 0%, rgba(200, 154, 61, 0.1) 100%)'
-                  }}>
-                    <Icon className="h-6 w-6" style={{ color: '#C89A3D' }} />
+        {/* Premium Process Steps with Connecting Line */}
+        <div className="relative">
+          {/* Connecting Line (desktop only) */}
+          <div className="hidden lg:block absolute top-20 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-daat-gold/30 to-transparent z-0" />
+          
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 relative z-10">
+            {steps.map((step, index) => {
+              const Icon = step.icon
+              const stepData = t.howWeWork[step.key as keyof typeof t.howWeWork] as { title: string; description: string }
+              return (
+                <div key={step.key} className="group">
+                  {/* Premium Step Badge */}
+                  <div className="relative w-20 h-20 mx-auto mb-6">
+                    {/* Glow effect */}
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-daat-gold to-daat-goldLight opacity-20 blur-xl group-hover:opacity-40 transition-opacity" />
+                    
+                    {/* Badge with gradient border */}
+                    <div className="relative w-full h-full rounded-full bg-background border-2 border-daat-gold flex items-center justify-center group-hover:scale-110 transition-transform shadow-glow-gold">
+                      {/* Step number */}
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-3xl font-bold bg-gradient-to-br from-daat-gold to-daat-goldLight bg-clip-text text-transparent">
+                          {index + 1}
+                        </span>
+                      </div>
+                      
+                      {/* Icon badge (bottom right) */}
+                      <div className="absolute -bottom-1 -right-1 w-8 h-8 rounded-full bg-gradient-to-br from-daat-gold to-daat-goldLight border-2 border-background flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <Icon className="h-4 w-4 text-daat-dark" />
+                      </div>
+                    </div>
                   </div>
-                  <div className="absolute top-4 right-4 text-4xl font-bold" style={{ color: 'rgba(200, 154, 61, 0.15)' }}>
-                    {index + 1}
-                  </div>
-                  <CardTitle className="text-daat-dark">{stepData.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>{stepData.description}</CardDescription>
-                </CardContent>
-              </Card>
-            )
-          })}
+                  
+                  {/* Card Content */}
+                  <Card variant="flat" className="text-center group-hover:shadow-premium transition-all">
+                    <CardHeader>
+                      <CardTitle className="text-xl font-bold mb-2">{stepData.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription className="leading-relaxed">{stepData.description}</CardDescription>
+                    </CardContent>
+                  </Card>
+                </div>
+              )
+            })}
+          </div>
         </div>
       </div>
     </section>

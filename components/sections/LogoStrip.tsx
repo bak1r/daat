@@ -38,6 +38,13 @@ export function LogoStrip({ locale }: LogoStripProps) {
     },
   ]
 
+  const sectionTitle =
+    locale === "tr"
+      ? "Firmalaşmadan önce hizmet sunduğumuz firmalar"
+      : locale === "al"
+        ? "Kompanitë që i kemi shërbyer para themelimit të kompanisë"
+        : "Companies we served before incorporation"
+
   return (
     <section className="relative py-16 md:py-20 overflow-x-hidden bg-gradient-to-br from-daat-gold/5 via-background to-daat-steel/5">
       {/* Premium decorative blobs */}
@@ -56,25 +63,21 @@ export function LogoStrip({ locale }: LogoStripProps) {
         />
       </div>
       <div className="container px-4 sm:px-6 lg:px-8 max-w-full relative z-10">
-        <p className="text-center text-sm text-foreground/60 mb-8 font-medium tracking-wide uppercase">
-          {locale === "tr"
-            ? "Partnerlerimiz"
-            : locale === "al"
-              ? "Partnerët tanë"
-              : "Our partners"}
+        <p className="text-center text-sm text-foreground/80 mb-10 font-semibold tracking-wide uppercase">
+          {sectionTitle}
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16">
+        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-5 md:gap-6">
           {clients.map((client) => (
             <div
               key={client.id}
-              className="flex items-center justify-center opacity-50 hover:opacity-100 transition-all duration-300 group"
+              className="group"
               title={client.name}
             >
-              <div className="relative h-12 w-32 group-hover:scale-110 transition-transform">
+              <div className="relative flex h-16 w-36 items-center justify-center rounded-xl border border-border/60 bg-card/80 px-3 py-2 shadow-sm backdrop-blur-[1px] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md dark:bg-card/60 dark:border-white/10">
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="h-full w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                  className="h-full w-full object-contain opacity-95 transition-opacity duration-300 group-hover:opacity-100 [filter:drop-shadow(0_1px_1px_rgba(0,0,0,0.2))] dark:[filter:drop-shadow(0_1px_2px_rgba(255,255,255,0.18))]"
                 />
               </div>
             </div>

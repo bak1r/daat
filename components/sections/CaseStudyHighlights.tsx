@@ -1,6 +1,5 @@
 import Link from "next/link"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import { getTranslations, type Locale } from "@/lib/i18n"
@@ -76,37 +75,41 @@ export function CaseStudyHighlights({ locale }: CaseStudyHighlightsProps) {
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {caseStudies.map((study) => (
-            <Card key={study.slug} variant="glass" className="overflow-hidden group cursor-pointer">
-              {/* Image with hover overlay */}
-              <div className="relative h-56 w-full overflow-hidden">
-                <Image
-                  src={study.image}
-                  alt={study.title}
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                {/* Premium overlay on hover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-daat-dark/90 via-daat-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <Button variant="premium" size="lg" className="translate-y-4 group-hover:translate-y-0 transition-transform">
-                    View Case Study
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
+            <Link
+              key={study.slug}
+              href={`/${locale}/case-studies/${study.slug}`}
+              className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-daat-gold focus-visible:ring-offset-2 rounded-xl"
+            >
+              <Card variant="glass" className="overflow-hidden group cursor-pointer h-full transition-shadow hover:shadow-lg">
+                {/* Image with hover overlay */}
+                <div className="relative h-56 w-full overflow-hidden">
+                  <Image
+                    src={study.image}
+                    alt={study.title}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  {/* Premium overlay on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-daat-dark/90 via-daat-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span className="inline-flex items-center justify-center rounded-lg bg-daat-gold px-6 py-3 text-sm font-semibold text-daat-dark shadow-lg translate-y-4 group-hover:translate-y-0 transition-transform">
+                      View Case Study
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </span>
+                  </div>
                 </div>
-              </div>
-              
-              <CardHeader>
-                <CardTitle className="group-hover:text-daat-gold transition-colors">{study.title}</CardTitle>
-                <CardDescription className="leading-relaxed">{study.description}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Link href={`/${locale}/case-studies/${study.slug}`} className="block">
-                  <Button variant="ghost" size="sm" className="w-full justify-between group/btn">
+
+                <CardHeader>
+                  <CardTitle className="group-hover:text-daat-gold transition-colors">{study.title}</CardTitle>
+                  <CardDescription className="leading-relaxed">{study.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <span className="flex w-full items-center justify-between text-sm font-medium text-daat-gold group/btn">
                     Read More
                     <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
+                  </span>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
       </div>
